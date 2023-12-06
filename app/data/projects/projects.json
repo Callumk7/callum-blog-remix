@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Project Name",
+    "description": "Short description about the project, and what it does",
+    "coverImageUrl": "http://image.com",
+    "tags": [
+      "react",
+      "ssr",
+      "SQL",
+      "serverless"
+    ],
+    "caseStudyUrl": "link to article on this project",
+    "related": [
+      "array",
+      "of related",
+      "articles"
+    ],
+    "slug": "project-name"
+  },
+  {
+    "name": "Project Name",
+    "description": "Short description about the project, and what it does",
+    "coverImageUrl": "http://image.com",
+    "tags": [
+      "react",
+      "ssr",
+      "SQL",
+      "serverless"
+    ],
+    "caseStudyUrl": "link to article on this project",
+    "related": [
+      "array",
+      "of related",
+      "articles"
+    ],
+    "slug": "project-name"
+  }
+]
