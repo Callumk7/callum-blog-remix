@@ -1,7 +1,25 @@
+import { PhotoPreview } from "@/components/photography/photo-preview";
+import { getRandomPhotos } from "@/lib/unsplash/get-photos";
+import { LoaderFunctionArgs, json } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
+
+export const loader = async ({ request }: LoaderFunctionArgs) => {
+  const photos = await getRandomPhotos(25, "portrait");
+  console.log(photos);
+
+  return json({ photos });
+};
+
+
 export default function PhotographyPage() {
+  const { photos } = useLoaderData<typeof loader>();
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full">
-      <h1 className="text-4xl font-bold">Projects</h1>
+    <div className="mx-2 mt-2">
+      <div className="grid grid-cols-2 gap-2 md:grid-cols-4 lg:grid-cols-5">
+        {photos.map((photo) => (
+          <PhotoPreview photo={photo} size="sm" key={photo.id} />
+        ))}
+      </div>
     </div>
   );
 }

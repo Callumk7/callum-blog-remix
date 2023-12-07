@@ -24,6 +24,21 @@ interface Project {
 	slug: string;
 }
 
+interface Photo {
+	id: string;
+	slug: string;
+	width: number;
+	height: number;
+	alt_description: string;
+	urls: {
+		raw: string;
+		full: string;
+		regular: string;
+		small: string;
+		thumb: string;
+	};
+}
+
 type Tags = Record<string, number>;
 
-export type { Post, Project, Author, Tags };
+export type { Post, Project, Author, Tags, Photo };
