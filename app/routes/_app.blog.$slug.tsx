@@ -3,7 +3,7 @@ import { PostBody } from "@/components/posts/post-body";
 import { PostTitle } from "@/components/posts/post-title";
 import { getPostBySlug } from "@/lib/posts/get-posts";
 import { markdownToHtml } from "@/lib/posts/markdown-to-html";
-import { LoaderFunctionArgs, json } from "@remix-run/node";
+import { LoaderFunctionArgs, json } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
 
 export const loader = async ({ request, params }: LoaderFunctionArgs) => {

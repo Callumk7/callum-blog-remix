@@ -1,5 +1,5 @@
 import stylesheet from "@/tw.css";
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction } from "@remix-run/cloudflare";
 import {
   Links,
   LiveReload,

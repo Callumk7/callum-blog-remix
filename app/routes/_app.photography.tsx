@@ -1,6 +1,6 @@
 import { PhotoPreview } from "@/components/photography/photo-preview";
 import { getRandomPhotos } from "@/lib/unsplash/get-photos";
-import { LoaderFunctionArgs, json } from "@remix-run/node";
+import { LoaderFunctionArgs, json } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {

@@ -1,7 +1,7 @@
 import { PostPreview } from "@/components/posts/post-preview";
 import { TagList } from "@/components/tags/tag-list";
 import { getAllPostData, getTags } from "@/features/posts/get-posts";
-import { LoaderFunctionArgs, json } from "@remix-run/node";
+import { LoaderFunctionArgs, json } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
 
 export const loader = ({ request }: LoaderFunctionArgs) => {
