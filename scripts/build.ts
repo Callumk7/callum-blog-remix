@@ -144,8 +144,8 @@ const buildJson = (postFolder: string, projectsFolder: string) => {
 
 	// TODO: it would be clearer if all the writes happen in this function, rather than being nested here..
 	writeTagsToFile(postTags, "app/data/posts/tags.json");
-	// writeToFile(postData, "app/data/posts/posts.json");
-	writeToKV(postData, "app/data/posts/posts.json");
+	writeToFile(postData, "app/data/posts/posts.json");
+	// writeToKV(postData, "app/data/posts/posts.json");
 
 	// now we can handle projects
 	const projectFileNames = getFilenamesFromFolder(projectsFolder);
