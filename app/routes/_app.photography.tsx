@@ -5,7 +5,6 @@ import { useLoaderData } from "@remix-run/react";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   const photos = await getRandomPhotos(25, "portrait");
-  console.log(photos);
 
   return json({ photos });
 };

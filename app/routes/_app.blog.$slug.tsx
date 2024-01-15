@@ -5,6 +5,13 @@ import { getPostBySlug } from "@/lib/posts/get-posts";
 import { markdownToHtml } from "@/lib/posts/markdown-to-html";
 import { LoaderFunctionArgs, json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
+import type { LinksFunction } from "@remix-run/node"; // or cloudflare/deno
+
+import styles from "@/styles/prism.css";
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: styles },
+];
 
 export const loader = async ({ request, params }: LoaderFunctionArgs) => {
   const slug = params.slug;
@@ -27,6 +34,7 @@ export default function BlogPostPage() {
   }
 
   const date = new Date(post.date).toDateString();
+
   return (
     <div className="relative">
       <div className="relative mx-auto aspect-square w-1/2 overflow-hidden rounded-md">
