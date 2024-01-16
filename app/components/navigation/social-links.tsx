@@ -1,6 +1,8 @@
-export function SocialLinks() {
+import clsx from "clsx";
+
+export function SocialLinks({ className }: { className?: string }) {
   return (
-    <div className="flex flex-row gap-x-7">
+    <div className={clsx(className, "flex flex-row gap-x-7")}>
       <svg
         width="24"
         height="24"
