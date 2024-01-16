@@ -48,7 +48,7 @@ export function Navbar() {
   }, [navigation.state, setIsMenuOpen])
 
   return (
-    <nav className="fixed z-50 flex w-full flex-row items-center justify-between border-b border-foreground/20 bg-background/80 px-20 py-5 backdrop-blur lg:px-48">
+    <nav className="fixed z-50 flex w-full flex-row items-center justify-between border-b border-foreground/20 bg-background/80 px-10 py-5 backdrop-blur lg:px-48">
       <Collapsible className="block md:hidden" open={isMenuOpen} onOpenChange={setIsMenuOpen}>
         <CollapsibleTrigger className="data-[state=open]:text-primary-1/30">MENU</CollapsibleTrigger>
         <CollapsibleContent>
