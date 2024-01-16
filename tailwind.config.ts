@@ -10,6 +10,12 @@ export default {
 				syne: ["Syne", "sans-serif"],
 				grotesk: ["Space Grotesk", "sans-serif"],
 			},
+			fontSize: {
+				'2vw': "2vw",
+				'4vw': "4vw",
+				'5vw': "5vw",
+				'6vw': "6vw",
+			},
 			colors: {
 				background: {
 					DEFAULT: "hsl(var(--background))",
