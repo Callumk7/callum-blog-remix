@@ -9,7 +9,7 @@ interface TagListProps {
 
 export function TagList({ tags, className }: TagListProps) {
   return (
-    <div className={clsx([className, "flex flex-row gap-7"])}>
+    <div className={clsx([className, "flex flex-wrap gap-x-7 gap-y-2"])}>
       {Object.entries(tags).map(([tag, count]) => (
         <div key={tag} className="flex flex-row gap-2">
           <Link

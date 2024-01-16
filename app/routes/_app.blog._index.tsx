@@ -1,10 +1,10 @@
 import { PostPreview } from "@/components/posts/post-preview";
 import { TagList } from "@/components/tags/tag-list";
 import { getAllPostData, getTags } from "@/features/posts/get-posts";
-import { LoaderFunctionArgs, json } from "@remix-run/node";
+import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 
-export const loader = ({ request }: LoaderFunctionArgs) => {
+export const loader = () => {
   const posts = getAllPostData();
   const tags = getTags();
 
@@ -21,7 +21,7 @@ export default function BlogPage() {
           <h1 className="md:leading-14 font-syne text-foreground text-3xl font-extrabold leading-9  tracking-tight sm:text-4xl sm:leading-10 md:text-6xl">
             Latest
           </h1>
-          <TagList className="pb-10" tags={tags} />
+          <TagList className="pb-10 pt-3" tags={tags} />
         </div>
         {posts.map((post) => (
           <PostPreview key={post.slug} post={post} />
