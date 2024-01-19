@@ -1,7 +1,6 @@
 import Portrait from "@/components/home/portrait";
 import PostList from "@/components/home/post-list";
 import Timeline from "@/components/home/timeline";
-import { Card } from "@/components/layout/card";
 import { Container } from "@/components/layout/container";
 import { Separator } from "@/components/layout/separator";
 import { getAllPostData } from "@/features/posts/get-posts";

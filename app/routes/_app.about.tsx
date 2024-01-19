@@ -5,7 +5,7 @@ export default function AboutPage() {
   return (
     <div className="mt-28">
       <Container>
-        <div className="flex flex-col lg:grid lg:grid-cols-3 items-center gap-8">
+        <div className="flex flex-col items-center gap-8 lg:grid lg:grid-cols-3">
           <Profile />
           <p className="col-span-2">
             Amet anim fugiat enim sunt est. Sit aute in cupidatat. Adipisicing Lorem sint
