@@ -83,35 +83,6 @@ const writeToFile = (data: object, fileName: string) => {
 	fs.writeFileSync(fileName, jsonData, "utf8");
 };
 
-const KV_URL = "https://api.cloudflare.com/client/v4/accounts/62efe0f8a2c4a70e3a5ece5a27fa574e/storage/kv/namespaces/bd465514f9d042eda9ada688905c4fbc/bulk"
-const KV_TOKEN = "60rOtzJKAPhRPLZyy2pR2Pahz-LbRPyc67IV0nOu"
-
-const writeToKV = async (posts: Post[], fileName: string) => {
-	// We are going to use the post slug as the title, and the entire data object as the value
-	const kvArray = posts.map((post) => {
-		return {
-			key: post.slug,
-			value: JSON.stringify(post),
-		}
-	})
-
-	// Write the array to kv
-	const res = await fetch(KV_URL, {
-		method: "PUT",
-		headers: {
-			Authorization: `Bearer ${KV_TOKEN}`,
-			"Content-Type": "application/json",
-		},
-		body: JSON.stringify(kvArray),
-	})
-
-	if (!res.ok) {
-		throw new Error("KV write failed")
-	}
-
-	console.log(res.statusText)
-}
-
 export type Tags = Record<string, number>;
 
 const writeTagsToFile = (tags: string[], fileName: string) => {
@@ -144,7 +115,6 @@ const buildJson = (postFolder: string, projectsFolder: string) => {
 
 	writeTagsToFile(postTags, "app/data/posts/tags.json");
 	writeToFile(postData, "app/data/posts/posts.json");
-	// writeToKV(postData, "app/data/posts/posts.json");
 
 	// now we can handle projects
 	const projectFileNames = getFilenamesFromFolder(projectsFolder);
