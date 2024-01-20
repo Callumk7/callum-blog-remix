@@ -10,6 +10,7 @@ export const projects: Project[] = [
 		caseStudyUrl: "https://example.com/remixbookstore",
 		related: ["Node Payments API", "Rust Data Analyzer"],
 		slug: "remix-bookstore",
+		tech: ["remix", "react", "dizzleORM", "Supabase"]
 	},
 	{
 		name: "Node Payments API",
@@ -20,6 +21,7 @@ export const projects: Project[] = [
 		caseStudyUrl: "https://example.com/nodepayments",
 		related: ["Remix Bookstore", "Real-time Chat"],
 		slug: "node-payments-api",
+		tech: ["node", "stripe", "dizzleORM", "Supabase"]
 	},
 	{
 		name: "Real-time Chat",
@@ -30,6 +32,7 @@ export const projects: Project[] = [
 		caseStudyUrl: "https://example.com/realtimechat",
 		related: ["Node Payments API", "Rust Data Analyzer"],
 		slug: "real-time-chat",
+		tech: ["web-sockets", "go", "svelte", "sveltekit"]
 	},
 	{
 		name: "Rust Data Analyzer",
@@ -40,6 +43,7 @@ export const projects: Project[] = [
 		caseStudyUrl: "https://example.com/rustdataanalyzer",
 		related: ["Real-time Chat", "Remix Bookstore"],
 		slug: "rust-data-analyzer",
+		tech: ["rust"]
 	},
 	{
 		name: "React Design System",
@@ -50,6 +54,7 @@ export const projects: Project[] = [
 		caseStudyUrl: "https://example.com/reactdesignsystem",
 		related: ["Remix Bookstore", "Node Payments API"],
 		slug: "react-design-system",
+		tech: ["react", "radix-ui"]
 	},
 	{
 		name: "Solidjs Exploration",
@@ -60,5 +65,6 @@ export const projects: Project[] = [
 		caseStudyUrl: "https://example.com/solidjs",
 		related: ["React Design System", "Real-time Chat"],
 		slug: "solidjs-exploration",
+		tech: ["solidjs"]
 	},
 ];

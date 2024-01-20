@@ -9,7 +9,22 @@ export const getAllPostData = (): Post[] => {
 	);
 
 	const posts: Post[] = JSON.parse(jsonData);
+	posts.sort((a, b) => {
+		const dateA = new Date(a.date);
+		const dateB = new Date(b.date);
+
+		// newest to oldest
+		return dateB.getTime() - dateA.getTime();
+	});
+
 	return posts;
+};
+
+export const getPostsByTag = (tag: string): Post[] => {
+	const allPosts = getAllPostData();
+	const filteredPosts = allPosts.filter((post) => post.tags.includes(tag));
+
+	return filteredPosts;
 };
 
 export const getPostBySlug = (slug: string) => {

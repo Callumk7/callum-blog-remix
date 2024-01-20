@@ -22,6 +22,7 @@ interface Project {
 	caseStudyUrl: string;
 	related: string[];
 	slug: string;
+	tech: string[];
 }
 
 interface Photo {

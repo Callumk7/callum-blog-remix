@@ -10,7 +10,7 @@ export function Card({ children, className, ...props }: CardProps) {
     <div
       className={clsx(
         className,
-        "flex flex-col gap-5 rounded-md border border-foreground/20 p-6",
+        "relative flex flex-col gap-5 rounded-md border border-foreground/20 p-6",
       )}
       {...props}
     >

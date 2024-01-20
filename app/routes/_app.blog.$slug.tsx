@@ -5,7 +5,7 @@ import { getPostBySlug } from "@/lib/posts/get-posts";
 import { markdownToHtml } from "@/lib/posts/markdown-to-html";
 import { LoaderFunctionArgs, json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import type { LinksFunction } from "@remix-run/node"; // or cloudflare/deno
+import type { LinksFunction } from "@remix-run/node";
 
 import styles from "@/styles/prism.css";
 
