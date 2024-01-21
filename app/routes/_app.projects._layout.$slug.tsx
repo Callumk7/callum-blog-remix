@@ -26,7 +26,7 @@ export const loader = ({ params }: LoaderFunctionArgs) => {
 export default function ProjectsPage() {
   const { project } = useLoaderData<typeof loader>();
   return (
-    <Container>
+    <Container width={"max"}>
       <h1 className="font-syne text-4xl font-black text-primary-1">{project?.name}</h1>
       {project && (
         <>

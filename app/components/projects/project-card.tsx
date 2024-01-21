@@ -7,7 +7,11 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card asLink to={`/projects/${project.slug}`}>
+    <Card
+      className="transition-colors ease-in-out hover:bg-background-hover"
+      asLink
+      to={`/projects/${project.slug}`}
+    >
       <div className="flex flex-wrap gap-3">
         {project.tech.map((t) => (
           <div

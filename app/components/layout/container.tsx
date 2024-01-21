@@ -1,12 +1,29 @@
 import clsx from "clsx";
+import { cva, VariantProps } from "class-variance-authority";
 
-interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+const containerVariants = cva("flex flex-col gap-10", {
+  variants: {
+    width: {
+      normal: "mx-auto md:w-10/12 lg:w-4/5",
+      wide: "mx-auto md:w-11/12 lg:w-10/12",
+      max: "w-full"
+    },
+  },
+  defaultVariants: {
+    width: "normal",
+  },
+});
+
+interface ContainerProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof containerVariants> {
   children: React.ReactNode;
   className?: string;
 }
-export function Container({ children, className, ...props }: ContainerProps) {
+
+export function Container({ children, className, width, ...props }: ContainerProps) {
   return (
-    <div className={clsx(className, "mx-auto flex lg:w-4/5 md:w-10/12 flex-col gap-10")} {...props}>
+    <div className={clsx(containerVariants({ className, width }))} {...props}>
       {children}
     </div>
   );
