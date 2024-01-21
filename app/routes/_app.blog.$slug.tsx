@@ -13,7 +13,7 @@ export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
 ];
 
-export const loader = async ({ request, params }: LoaderFunctionArgs) => {
+export const loader = ({ request, params }: LoaderFunctionArgs) => {
   const slug = params.slug;
   const post = getPostBySlug(slug!);
 
@@ -21,9 +21,7 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
     return json({ post: null });
   }
 
-  const content = await markdownToHtml(post.content);
-
-  return json({ post: { ...post, content } });
+  return json({ post });
 };
 
 export default function BlogPostPage() {

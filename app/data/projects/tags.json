@@ -1,17 +1,1 @@
-{
-  "react": 2,
-  "ssr": 3,
-  "remix": 2,
-  "angular": 1,
-  "firebase": 1,
-  "material-ui": 1,
-  "typescript": 3,
-  "nodejs": 3,
-  "vuejs": 1,
-  "mongodb": 1,
-  "express": 1,
-  "vuetify": 1,
-  "postgres": 1,
-  "supabase": 1,
-  "hono": 1
-}
+{}

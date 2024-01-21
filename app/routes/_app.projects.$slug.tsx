@@ -8,7 +8,7 @@ import { useLoaderData, useParams } from "@remix-run/react";
 ///
 /// LOADER
 ///
-export const loader = async ({ params }: LoaderFunctionArgs) => {
+export const loader = ({ params }: LoaderFunctionArgs) => {
   const slug = params.slug;
   const project = getProjectBySlug(slug!);
 
@@ -16,10 +16,7 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
     return json({ project: null });
   }
 
-  // this is actually quite expensive..
-  const content = await markdownToHtml(project.content);
-
-  return json({ project: { ...project, content } });
+  return json({ project });
 };
 
 export default function ProjectsPage() {

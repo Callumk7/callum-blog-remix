@@ -2,6 +2,7 @@ import { Post, Project } from "@/types";
 import path from "path";
 import fs, { PathLike } from "fs";
 import matter from "gray-matter";
+import { markdownToHtml } from "@/lib/posts/markdown-to-html";
 
 const createSlug = (title: string) => {
 	let slug = "";
@@ -15,7 +16,7 @@ const createSlug = (title: string) => {
 	return slug;
 };
 
-const getPostDataFromFile = (filePath: PathLike): Post => {
+const getPostDataFromFile = async (filePath: PathLike): Promise<Post> => {
 	const fileContent = fs.readFileSync(filePath, "utf8");
 
 	const { data, content } = matter(fileContent);
@@ -23,7 +24,8 @@ const getPostDataFromFile = (filePath: PathLike): Post => {
 		throw new Error("File missing required content");
 	}
 
-	// TODO: Add Zod validation on matter here
+	// perform the content transformation here, to improve request time
+	const htmlContent = await markdownToHtml(content);
 
 	const { title, description, coverImageUrl, date, author, tags } = data;
 	if (!title || !description || !coverImageUrl || !date || !author || !tags) {
@@ -35,7 +37,7 @@ const getPostDataFromFile = (filePath: PathLike): Post => {
 	return {
 		title,
 		description,
-		content,
+		content: htmlContent,
 		coverImageUrl,
 		date,
 		author,
@@ -44,7 +46,7 @@ const getPostDataFromFile = (filePath: PathLike): Post => {
 	};
 };
 
-const getProjectDataFromFile = (filePath: PathLike): Project => {
+const getProjectDataFromFile = async (filePath: PathLike): Promise<Project> => {
 	const fileContent = fs.readFileSync(filePath, "utf8");
 
 	const { data, content } = matter(fileContent);
@@ -52,10 +54,19 @@ const getProjectDataFromFile = (filePath: PathLike): Project => {
 		throw new Error("File missing required content");
 	}
 
-	// TODO: Add Zod validation on matter here
+	// perform the content transformation here, to improve request time
+	const htmlContent = await markdownToHtml(content);
 
 	const { name, description, coverImageUrl, tags, caseStudyUrl, related, tech } = data;
-	if (!name || !description || !coverImageUrl || !tags || !caseStudyUrl || !related || !tech) {
+	if (
+		!name ||
+		!description ||
+		!coverImageUrl ||
+		!tags ||
+		!caseStudyUrl ||
+		!related ||
+		!tech
+	) {
 		throw new Error("A required field is missing");
 	}
 
@@ -68,9 +79,9 @@ const getProjectDataFromFile = (filePath: PathLike): Project => {
 		tags,
 		caseStudyUrl,
 		related,
-		content,
+		content: htmlContent,
 		slug,
-		tech
+		tech,
 	};
 };
 
@@ -101,13 +112,14 @@ const writeTagsToFile = (tags: string[], fileName: string) => {
 };
 
 const buildJson = (postFolder: string, projectsFolder: string) => {
-	// get post data first..
 	const postFileNames = getFilenamesFromFolder(postFolder);
 	const postData: Post[] = [];
 	for (const fileName of postFileNames) {
-		postData.push(
-			getPostDataFromFile(path.join(process.cwd(), postFolder, fileName)),
-		);
+		console.log(`Getting data from ${fileName}`);
+		getPostDataFromFile(path.join(process.cwd(), postFolder, fileName)).then((data) =>
+			postData.push(data),
+		),
+			console.log(`data added for ${fileName}`);
 	}
 
 	const postTags: string[] = [];
@@ -122,9 +134,11 @@ const buildJson = (postFolder: string, projectsFolder: string) => {
 	const projectFileNames = getFilenamesFromFolder(projectsFolder);
 	const projectsData: Project[] = [];
 	for (const fileName of projectFileNames) {
-		projectsData.push(
-			getProjectDataFromFile(path.join(process.cwd(), projectsFolder, fileName)),
-		);
+		console.log(`Getting data from ${fileName}`);
+		getProjectDataFromFile(path.join(process.cwd(), projectsFolder, fileName)).then(
+			(data) => projectsData.push(data),
+		),
+			console.log(`data added for ${fileName}`);
 	}
 
 	const projectTags: string[] = [];
@@ -136,4 +150,7 @@ const buildJson = (postFolder: string, projectsFolder: string) => {
 	writeToFile(projectsData, "app/data/projects/projects.json");
 };
 
+console.time("script");
 buildJson("posts", "projects");
+console.timeEnd("script");
+console.log("Write complete, all files are in JSON format");
