@@ -22,6 +22,7 @@ interface Project {
 	caseStudyUrl: string;
 	related: string[];
 	slug: string;
+	content: string;
 	tech: string[];
 }
 

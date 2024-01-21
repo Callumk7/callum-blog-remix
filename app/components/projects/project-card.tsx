@@ -7,7 +7,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card>
+    <Card asLink to={`/projects/${project.slug}`}>
       <div className="flex flex-wrap gap-3">
         {project.tech.map((t) => (
           <div

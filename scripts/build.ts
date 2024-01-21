@@ -54,8 +54,8 @@ const getProjectDataFromFile = (filePath: PathLike): Project => {
 
 	// TODO: Add Zod validation on matter here
 
-	const { name, description, coverImageUrl, tags, caseStudyUrl, related } = data;
-	if (!name || !description || !coverImageUrl || !tags || !caseStudyUrl || !related) {
+	const { name, description, coverImageUrl, tags, caseStudyUrl, related, tech } = data;
+	if (!name || !description || !coverImageUrl || !tags || !caseStudyUrl || !related || !tech) {
 		throw new Error("A required field is missing");
 	}
 
@@ -68,7 +68,9 @@ const getProjectDataFromFile = (filePath: PathLike): Project => {
 		tags,
 		caseStudyUrl,
 		related,
+		content,
 		slug,
+		tech
 	};
 };
 
