@@ -4,11 +4,10 @@
 	"sideEffects": false,
 	"type": "module",
 	"scripts": {
-		"build": "remix build",
+		"build": "tsx scripts/build.ts && remix build",
 		"dev": "remix dev --manual",
 		"start": "remix-serve ./build/index.js",
 		"typecheck": "tsc",
-		"generate": "drizzle-kit generate:sqlite",
 		"write": "tsx scripts/build.ts"
 	},
 	"dependencies": {
