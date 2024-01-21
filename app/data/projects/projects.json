@@ -1,1 +1,120 @@
-[]
+[
+  {
+    "name": "This Blog",
+    "description": "A place to showcase what I am working on, and learning",
+    "coverImageUrl": "http://image.com",
+    "tags": [
+      "react",
+      "ssr",
+      "remix"
+    ],
+    "caseStudyUrl": "link to article on this project",
+    "related": [
+      "array",
+      "of related",
+      "articles"
+    ],
+    "content": "<p>This is a sample project file, where I can write about projects I have completed. It is super important to remember that I am working hard on presenting this data well, and to be employable.</p>\n<h2>Introduction</h2>\n<p>The first step is a strong introduction.</p>\n<h2>Outline</h2>\n<ul>\n<li>Problem</li>\n<li>Solution</li>\n<li>Difficulties</li>\n<li>Overcome</li>\n<li>Conclusion</li>\n</ul>\n",
+    "slug": "this-blog",
+    "tech": [
+      "react",
+      "ssr",
+      "remix",
+      "nodejs",
+      "typescript"
+    ]
+  },
+  {
+    "name": "BookWorm Digital Library",
+    "description": "Explore and borrow an extensive collection of digital books, audio, and more",
+    "coverImageUrl": "http://image.com/bookworm",
+    "tags": [
+      "angular",
+      "firebase",
+      "material-ui",
+      "typescript",
+      "nodejs"
+    ],
+    "caseStudyUrl": "link to article on BookWorm project",
+    "related": [
+      "array",
+      "of related",
+      "articles",
+      "about BookWorm"
+    ],
+    "content": "<p>The BookWorm Digital Library project allowed me to engage with the potential of digital libraries and how they can promote learning and accessibility.</p>\n<h2>Introduction</h2>\n<p>In this section, I examine the process of transforming theoretical concept into practical solution through the experience of creating BookWorm.</p>\n<h2>Outline</h2>\n<ul>\n<li>\n<p>Problem: Limited access to books and educational material for people in remote areas.</p>\n</li>\n<li>\n<p>Solution: \"BookWorm Digital Library\" - an online platform offering an extensive collection of digital books, audio, and more for exploration and borrowing.</p>\n</li>\n<li>\n<p>Difficulties: Creating an intuitive and responsive UI that encourages exploration and ease of book borrowing. Managing large and diverse data sets with Firebase.</p>\n</li>\n<li>\n<p>Overcome: Leveraging Angular with Material-UI for a responsive and intuitive UI, and Firebase for effective data management and real-time updates.</p>\n</li>\n<li>\n<p>Conclusion: The \"BookWorm Digital Library\" project showcases the power of digital tools in promoting learning, reinforcing the importance of accessibility in digital platforms.</p>\n</li>\n</ul>\n",
+    "slug": "bookworm-digital-library",
+    "tech": [
+      "angular",
+      "firebase",
+      "material-ui",
+      "typescript",
+      "nodejs"
+    ]
+  },
+  {
+    "name": "FoodFind Restaurant Locator",
+    "description": "Search, discover, and review local dining options in your city",
+    "coverImageUrl": "http://image.com/foodfind",
+    "tags": [
+      "vuejs",
+      "ssr",
+      "mongodb",
+      "express",
+      "vuetify",
+      "nodejs",
+      "typescript"
+    ],
+    "caseStudyUrl": "link to article on FoodFind project",
+    "related": [
+      "array",
+      "of related",
+      "articles",
+      "about FoodFind"
+    ],
+    "content": "<p>This project was a wonderful opportunity to put into practice my favorite tech stack and to contribute to the growing food and restaurant discovery market.</p>\n<h2>Introduction</h2>\n<p>The following section delineates the journey of tackling a common problem experienced by food enthusiasts and contributing an effective solution.</p>\n<h2>Outline</h2>\n<ul>\n<li>\n<p>Problem: Users find it difficult to discover local restaurants and authenticate the reliability of the reviews.</p>\n</li>\n<li>\n<p>Solution: \"FoodFind\" provides a user-friendly interface to search, discover, and review local dining options.</p>\n</li>\n<li>\n<p>Difficulties: Dealing with a large data set of restaurants and ensuring seamless integration with the MongoDB server.</p>\n</li>\n<li>\n<p>Overcome: Efficient data modeling, effective use of Express.js for server-side operations, and implementing Vue.js for a smooth UI/UX.</p>\n</li>\n<li>\n<p>Conclusion: \"FoodFind\" has made the process of food discovery comprehensive and enjoyable. Receiving positive feedback from users has been an incredible reward.</p>\n</li>\n</ul>\n",
+    "slug": "foodfind-restaurant-locator",
+    "tech": [
+      "vuejs",
+      "ssr",
+      "mongodb",
+      "express",
+      "vuetify",
+      "nodejs",
+      "typescript"
+    ]
+  },
+  {
+    "name": "playQ Videogame Playlist Manager",
+    "description": "Create and share playlists to keep track of what you have been playing",
+    "coverImageUrl": "http://image.com",
+    "tags": [
+      "react",
+      "ssr",
+      "postgres",
+      "remix",
+      "supabase",
+      "hono",
+      "nodejs",
+      "typescript"
+    ],
+    "caseStudyUrl": "link to article on this project",
+    "related": [
+      "array",
+      "of related",
+      "articles"
+    ],
+    "content": "<p>This is a sample project file, where I can write about projects I have completed. It is super important to remember that I am working hard on presenting this data well, and to be employable.</p>\n<h2>Introduction</h2>\n<p>The first step is a strong introduction.</p>\n<h2>Outline</h2>\n<ul>\n<li>Problem</li>\n<li>Solution</li>\n<li>Difficulties</li>\n<li>Overcome</li>\n<li>Conclusion</li>\n</ul>\n",
+    "slug": "playq-videogame-playlist-manager",
+    "tech": [
+      "react",
+      "ssr",
+      "postgres",
+      "remix",
+      "supabase",
+      "hono",
+      "nodejs",
+      "typescript"
+    ]
+  }
+]

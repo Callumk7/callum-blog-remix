@@ -12,3 +12,28 @@
 	--primary-2: 67 100% 76%;
 	--primary-3: 67 95% 67%;
 }
+
+/* Sidebar styling for different browsers */
+html {
+	overflow-y: scroll;
+    scrollbar-width: thin; /* for firefox */
+    scrollbar-color: hsl(var(--primary-2)) hsl(var(--background)); /* for firefox */
+}
+
+::-webkit-scrollbar {
+	width: 6px; /* for vertical scrollbars */
+	height: 6px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+	background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+	background: hsl( var(--primary-2) );
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: hsl( var(--primary-1) );
+}

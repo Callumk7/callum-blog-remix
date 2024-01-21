@@ -111,15 +111,15 @@ const writeTagsToFile = (tags: string[], fileName: string) => {
 	writeToFile(tagsObj, fileName);
 };
 
-const buildJson = (postFolder: string, projectsFolder: string) => {
+const buildJson = async (postFolder: string, projectsFolder: string) => {
 	const postFileNames = getFilenamesFromFolder(postFolder);
 	const postData: Post[] = [];
 	for (const fileName of postFileNames) {
 		console.log(`Getting data from ${fileName}`);
-		getPostDataFromFile(path.join(process.cwd(), postFolder, fileName)).then((data) =>
-			postData.push(data),
-		),
-			console.log(`data added for ${fileName}`);
+		postData.push(
+			await getPostDataFromFile(path.join(process.cwd(), postFolder, fileName)),
+		);
+		console.log(`data retrieved for ${fileName}`);
 	}
 
 	const postTags: string[] = [];
@@ -135,10 +135,12 @@ const buildJson = (postFolder: string, projectsFolder: string) => {
 	const projectsData: Project[] = [];
 	for (const fileName of projectFileNames) {
 		console.log(`Getting data from ${fileName}`);
-		getProjectDataFromFile(path.join(process.cwd(), projectsFolder, fileName)).then(
-			(data) => projectsData.push(data),
-		),
-			console.log(`data added for ${fileName}`);
+		projectsData.push(
+			await getProjectDataFromFile(
+				path.join(process.cwd(), projectsFolder, fileName),
+			),
+		);
+		console.log(`data retrieved for ${fileName}`);
 	}
 
 	const projectTags: string[] = [];
@@ -150,7 +152,7 @@ const buildJson = (postFolder: string, projectsFolder: string) => {
 	writeToFile(projectsData, "app/data/projects/projects.json");
 };
 
-console.time("script");
-buildJson("posts", "projects");
-console.timeEnd("script");
+console.time("script")
+await buildJson("posts", "projects");
+console.timeEnd("script")
 console.log("Write complete, all files are in JSON format");
