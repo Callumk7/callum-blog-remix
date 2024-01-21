@@ -20,17 +20,19 @@ export default function ProjectLayout() {
   const { projects } = useLoaderData<typeof loader>();
 
   return (
-    <div className="grid lg:grid-cols-8 gap-14">
-      <div className="lg:col-span-5 row-span-full">
+    <div className="grid xl:grid-cols-8 gap-14">
+      <div className="xl:col-span-5 row-span-full">
         <Outlet />
       </div>
-      <div className="relative w-full lg:col-span-3">
-        <Separator className="lg:hidden" />
-        <h3 className="font-syne font-bold py-4">Other Projects</h3>
-        <div className="lg:fixed max-w-sm grid gap-3">
-          {projects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
+      <div className="relative w-full xl:col-span-3">
+        <Separator className="xl:hidden" />
+        <div className="xl:fixed">
+          <h3 className="font-syne text-lg font-bold pb-4 pt-10">Other Projects</h3>
+          <div className="xl:max-w-sm grid grid-cols-2 lg:grid-cols-1 gap-3">
+            {projects.map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
