@@ -1,7 +1,6 @@
 import { Container } from "@/components/layout/container";
 import { PostBody } from "@/components/posts/post-body";
 import { PostTitle } from "@/components/posts/post-title";
-import { markdownToHtml } from "@/lib/posts/markdown-to-html";
 import { LoaderFunctionArgs, json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
@@ -13,7 +12,7 @@ export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
 ];
 
-export const loader = ({ request, params }: LoaderFunctionArgs) => {
+export const loader = ({ params }: LoaderFunctionArgs) => {
   const slug = params.slug;
   const post = getPostBySlug(slug!);
 

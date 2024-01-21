@@ -14,6 +14,10 @@ This is a sample project file, where I can write about projects I have completed
 
 The first step is a strong introduction.
 
+This is an example link [[foodFind]] what does it make it?
+
+I also want to see what happens to [this link](/projects/bookworm-digital-library)
+
 ## Outline
 
 -   Problem

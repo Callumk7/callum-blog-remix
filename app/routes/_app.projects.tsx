@@ -18,6 +18,7 @@ export default function ProjectsPage() {
   const [projState, setProjState] = useState(projects);
 
   // we need to know if we are at the root, to not display the outlet
+  // this does not feel very remix-y.
   const isRoot = params.slug === undefined;
 
   // the params might be the project slug. If so, we want to remove the current
@@ -41,7 +42,7 @@ export default function ProjectsPage() {
         </h1>
         <p className="font-mono">Explore my work.</p>
       </div>
-      <div className={isRoot ? "" : "grid gap-4 lg:grid-cols-3"}>
+      <div className={isRoot ? "" : "grid gap-4 xl:grid-cols-3"}>
         {!isRoot && (
             <div className="col-span-2">
               <Outlet />

@@ -1,9 +1,13 @@
 import { Container } from "@/components/layout/container";
 import { PostBody } from "@/components/posts/post-body";
 import { getProjectBySlug } from "@/features/projects/get-projects";
-import { markdownToHtml } from "@/lib/posts/markdown-to-html";
-import { LoaderFunctionArgs, json } from "@remix-run/node";
-import { useLoaderData, useParams } from "@remix-run/react";
+import { LinksFunction, LoaderFunctionArgs, json } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
+import styles from "@/styles/prism.css";
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: styles },
+];
 
 ///
 /// LOADER
