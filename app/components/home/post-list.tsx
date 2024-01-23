@@ -6,12 +6,10 @@ interface PostListProps {
 }
 export default function PostList({ posts }: PostListProps) {
   return (
-    <div className="divide-y divide-gray-200 dark:divide-gray-700">
-      <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-        {posts.map((post) => (
-          <PostPreview key={post.slug} post={post} />
-        ))}
-      </div>
+    <div className="space-y-16 grid divide-y divide-foreground/20 md:space-y-5">
+      {posts.map((post) => (
+        <PostPreview key={post.slug} post={post} />
+      ))}
     </div>
   );
 }

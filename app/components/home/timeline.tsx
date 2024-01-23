@@ -1,8 +1,9 @@
 import { Card } from "../layout/card";
+import { Separator } from "../layout/separator";
 
 export default function Timeline() {
   return (
-    <div className="flex w-full items-center">
+    <div className="flex divide-x divide-primary-1 w-full items-center">
       <div className="flex w-full flex-col gap-y-7">
         <div className="flex w-full items-center">
           <Card className="ml-20 w-full">
@@ -32,7 +33,6 @@ export default function Timeline() {
           <div className="w-20 border-t border-primary-1" />
         </div>
       </div>
-      <div className="h-[50vh] border-l border-primary-1" />
       <div className="flex w-full flex-col gap-y-7">
         <div className="flex items-center">
           <div className="w-10 border-t border-primary-1" />
