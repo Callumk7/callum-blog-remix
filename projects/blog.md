@@ -14,6 +14,8 @@ This is a sample project file, where I can write about projects I have completed
 
 The first step is a strong introduction.
 
+[Test Link to PLAYQ](/projects/playq-videogame-playlist-manager)
+
 ## Outline
 
 -   Problem

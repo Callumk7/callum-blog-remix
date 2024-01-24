@@ -14,7 +14,7 @@
       "of related",
       "articles"
     ],
-    "content": "<p>This is a sample project file, where I can write about projects I have completed. It is super important to remember that I am working hard on presenting this data well, and to be employable.</p>\n<h2>Introduction</h2>\n<p>The first step is a strong introduction.</p>\n<h2>Outline</h2>\n<ul>\n<li>Problem</li>\n<li>Solution</li>\n<li>Difficulties</li>\n<li>Overcome</li>\n<li>Conclusion</li>\n</ul>\n",
+    "content": "<p>This is a sample project file, where I can write about projects I have completed. It is super important to remember that I am working hard on presenting this data well, and to be employable.</p>\n<h2>Introduction</h2>\n<p>The first step is a strong introduction.</p>\n<p><a href=\"/projects/playq-videogame-playlist-manager\">Test Link to PLAYQ</a></p>\n<h2>Outline</h2>\n<ul>\n<li>Problem</li>\n<li>Solution</li>\n<li>Difficulties</li>\n<li>Overcome</li>\n<li>Conclusion</li>\n</ul>\n",
     "slug": "this-blog",
     "tech": [
       "react",

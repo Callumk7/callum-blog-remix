@@ -9,7 +9,9 @@ export async function markdownToHtml(markdown: string) {
 		.use(parse)
 		.use(stringify)
 		.use(prism as any, { transformInlineCode: true })
-		.use(html, { sanitize: false })
+		.use(html, {
+			sanitize: false,
+		})
 		.process(markdown);
 	return result.toString();
 }
