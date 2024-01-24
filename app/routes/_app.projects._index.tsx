@@ -2,8 +2,7 @@ import { Container } from "@/components/layout/container";
 import { ProjectCard } from "@/components/projects/project-card";
 import { getAllProjectData } from "@/features/projects/get-projects";
 import { json } from "@remix-run/node";
-import { useLoaderData, useParams } from "@remix-run/react";
-import { useState, useEffect } from "react";
+import { useLoaderData } from "@remix-run/react";
 
 export const loader = () => {
   const projects = getAllProjectData();

@@ -1,6 +1,7 @@
 import { PostPreview } from "@/components/posts/post-preview";
 import { TagList } from "@/components/tags/tag-list";
-import { getAllPostData, getPostsByTag, getTags } from "@/features/posts/get-posts";
+import { getAllPostData, getPostsByTag } from "@/features/posts/get-posts";
+import { getTags } from "@/features/posts/get-tags";
 import { LoaderFunctionArgs, json, redirect } from "@remix-run/node";
 import { useLoaderData, useParams } from "@remix-run/react";
 

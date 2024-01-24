@@ -1,11 +1,24 @@
 import { Container } from "@/components/layout/container";
-import { ProjectCard } from "@/components/projects/project-card";
+import { TagList } from "@/components/tags/tag-list";
+import { getProjectTags } from "@/features/projects/get-project-tags";
+import { LoaderFunctionArgs, json } from "@remix-run/node";
 import { Outlet, useLoaderData, useParams } from "@remix-run/react";
-import { useEffect, useState } from "react";
+
+///
+/// LOADER
+///
+export const loader = ({ params }: LoaderFunctionArgs) => {
+  const tags = getProjectTags();
+
+
+  return json({ tags });
+};
 
 export default function ProjectsPage() {
+  const { tags } = useLoaderData<typeof loader>();
   return (
     <Container width={"max"}>
+      <TagList tags={tags} />
       <Outlet />
     </Container>
   );
