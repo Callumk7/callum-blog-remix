@@ -6,7 +6,7 @@ export default function CVRoute() {
     <Container>
       <Card>
         <h1>Callum Kloos</h1>
-        <h2>Product Designer and Developer</h2>
+        <h2>Web Developer and Product Specialist</h2>
       </Card>
       <div className="grid grid-cols-2 gap-3">
         <Card>
