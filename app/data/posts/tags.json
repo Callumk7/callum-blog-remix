@@ -1,11 +1,13 @@
 {
-  "programming": 4,
-  "go": 3,
-  "rust": 2,
+  "programming": 5,
+  "c#": 1,
+  "go": 4,
+  "rust": 3,
+  "javascript": 1,
+  "typescript": 3,
   "web development": 1,
   "react": 2,
   "svelte": 1,
-  "typescript": 2,
   "hooks": 1,
   "performance": 1
 }

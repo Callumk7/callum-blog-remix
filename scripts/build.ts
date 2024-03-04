@@ -57,7 +57,7 @@ const getProjectDataFromFile = async (filePath: PathLike): Promise<Project> => {
 	// perform the content transformation here, to improve request time
 	const htmlContent = await markdownToHtml(content);
 
-	const { name, description, coverImageUrl, tags, caseStudyUrl, related, tech } = data;
+	const { name, description, projectUrl, coverImageUrl, tags, caseStudyUrl, related, tech } = data;
 	if (
 		!name ||
 		!description ||
@@ -75,6 +75,7 @@ const getProjectDataFromFile = async (filePath: PathLike): Promise<Project> => {
 	return {
 		name,
 		description,
+		projectUrl,
 		coverImageUrl,
 		tags,
 		caseStudyUrl,

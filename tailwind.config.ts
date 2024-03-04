@@ -12,6 +12,7 @@ export default {
 			},
 			fontSize: {
 				'2vw': "2vw",
+				'3vw': "3vw",
 				'4vw': "4vw",
 				'5vw': "5vw",
 				'6vw': "6vw",

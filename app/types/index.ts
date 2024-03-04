@@ -17,6 +17,7 @@ interface Author {
 interface Project {
 	name: string;
 	description: string;
+	projectUrl?: string;
 	coverImageUrl: string;
 	tags: string[];
 	caseStudyUrl: string;

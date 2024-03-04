@@ -1,6 +1,6 @@
 {
-  "react": 2,
-  "ssr": 3,
+  "react": 3,
+  "ssr": 4,
   "remix": 2,
   "angular": 1,
   "firebase": 1,
@@ -13,5 +13,6 @@
   "vuetify": 1,
   "postgres": 1,
   "supabase": 1,
-  "hono": 1
+  "hono": 1,
+  "nextjs": 1
 }
