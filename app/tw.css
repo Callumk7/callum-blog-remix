@@ -13,6 +13,13 @@
 	--primary-3: 67 95% 67%;
 }
 
+/* some default styles */
+@layer base {
+    h1 {
+        @apply text-4xl font-black 
+    }
+}
+
 /* Sidebar styling for different browsers */
 html {
 	overflow-y: scroll;

@@ -1,4 +1,5 @@
 import { Container } from "@/components/layout/container";
+import { Title } from "@/components/layout/title";
 import { ProjectCard } from "@/components/projects/project-card";
 import { getAllProjectData } from "@/features/projects/get-projects";
 import { json } from "@remix-run/node";
@@ -15,9 +16,7 @@ export default function ProjectsIndex() {
 
   return (
     <Container>
-      <h1 className="md:leading-14 font-syne text-3xl font-extrabold leading-9 tracking-tight  text-foreground sm:text-4xl sm:leading-10 md:text-6xl">
-        Projects
-      </h1>
+      <Title title="Projects" />
       <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <ProjectCard key={project.slug} project={project} />

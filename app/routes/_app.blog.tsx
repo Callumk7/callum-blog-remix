@@ -6,5 +6,5 @@ export default function BlogLayout() {
     <Container>
       <Outlet />
     </Container>
-  )
+  );
 }

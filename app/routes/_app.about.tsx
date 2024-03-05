@@ -8,18 +8,21 @@ export default function AboutPage() {
       <Container>
         <div className="flex flex-col items-center gap-8 lg:grid lg:grid-cols-3">
           <Profile />
-          <div className="col-span-2">
+          <div className="prose prose-invert col-span-2 max-w-none">
             <p>
-              Consequat mollit sint ut exercitation eiusmod eu nisi. Exercitation velit
-              duis magna adipisicing do cillum esse. Minim aute adipisicing est irure
-              adipisicing ex esse reprehenderit qui. Ad nisi in eiusmod qui esse qui
-              consequat ea mollit nulla et. Qui velit eiusmod sint nulla aute minim
-              laborum esse et velit nisi ad fugiat. Do in dolore do excepteur consectetur
-              commodo ad id velit. Amet deserunt deserunt sit amet aute occaecat aliquip
-              labore aliquip. Id enim et ex ea. Velit non officia amet aute. Nisi laborum
-              ea do commodo. Voluptate dolore incididunt in excepteur adipisicing
-              excepteur in. Id esse sit laborum laborum fugiat veniam exercitation minim
-              quis ullamco occaecat qui.
+              Hi, and thanks for stopping by. My name is Callum and I am a self taught web
+              developer specialising in building full stack applications with{" "}
+              <a href="https://remix.run">Remix</a>, <a href="https://react.dev">React</a>{" "}
+              and <a href="https://www.typescriptlang.org">Typescript</a>. Checkout my
+              projects in the Project section, or leave a message!
+            </p>
+            <p>
+              I&apos;ve worked at start ups and scale ups as a Product manager, helping to
+              deliver value through research, rapid testing and a desire to succeed.
+            </p>
+            <p>
+              When I am not programming, I enjoy walking my dog, chess, photography and
+              running. Reach out and lets connect!
             </p>
           </div>
         </div>

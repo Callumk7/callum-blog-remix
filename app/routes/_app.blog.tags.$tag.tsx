@@ -23,7 +23,7 @@ export default function BlogPage() {
   const params = useParams();
   const tag = params.tag;
   if (!tag) {
-    return <div>No tag, what is going on?</div>
+    return <div>No tag, what is going on?</div>;
   }
   return (
     <>
