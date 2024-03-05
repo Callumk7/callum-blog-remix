@@ -8,9 +8,16 @@ const containerVariants = cva("flex flex-col gap-10", {
       wide: "mx-auto md:w-11/12 lg:w-10/12",
       max: "w-full"
     },
+    space: {
+      compact: "space-y-3",
+      normal: "space-y-7",
+      wide: "space-y-10",
+      none: "",
+    }
   },
   defaultVariants: {
     width: "normal",
+    space: "none"
   },
 });
 
@@ -21,9 +28,9 @@ interface ContainerProps
   className?: string;
 }
 
-export function Container({ children, className, width, ...props }: ContainerProps) {
+export function Container({ children, className, width, space, ...props }: ContainerProps) {
   return (
-    <div className={clsx(containerVariants({ className, width }))} {...props}>
+    <div className={clsx(containerVariants({ className, width, space }))} {...props}>
       {children}
     </div>
   );
