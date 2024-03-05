@@ -1,11 +1,9 @@
 {
   "react": 3,
-  "ssr": 3,
   "remix": 2,
-  "postgres": 1,
+  "cloudflare": 1,
   "supabase": 1,
-  "hono": 1,
-  "nodejs": 1,
   "typescript": 1,
+  "ssr": 1,
   "nextjs": 1
 }

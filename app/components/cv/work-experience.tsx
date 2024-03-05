@@ -19,7 +19,9 @@ export function WorkExperience({
   return (
     <Card>
       <TimeWorked dateFrom={dateFrom} dateTo={dateTo} />
-      <h2 className="pb-3 pt-1 font-syne text-3xl font-bold text-primary-1">{company}</h2>
+      <h2 className="pb-3 pt-1 font-syne text-3xl font-black text-primary-1">
+        {company}
+      </h2>
       <h2 className="pb-3 pt-1 text-xl font-semibold">{title}</h2>
 
       <p>{children}</p>

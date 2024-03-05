@@ -8,9 +8,7 @@ import type { LinksFunction } from "@remix-run/node";
 import styles from "@/styles/prism.css";
 import { getPostBySlug } from "@/features/posts/get-posts";
 
-export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: styles },
-];
+export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
 export const loader = ({ params }: LoaderFunctionArgs) => {
   const slug = params.slug;
@@ -41,9 +39,9 @@ export default function BlogPostPage() {
           className="h-full w-full object-cover object-center"
         />
       </div>
-      <p className="w-full py-2 text-center text-sm text-foreground/80">{date}</p>
       <Container>
-        <div className="flex flex-row gap-x-5">
+        <p className="w-full py-2 text-center text-sm text-foreground/80">{date}</p>
+        <div className="mx-auto mt-5 flex w-fit flex-row gap-x-5">
           {post.tags.map((tag) => (
             <span
               className="rounded-full bg-white px-2 py-1 font-mono text-sm text-background"

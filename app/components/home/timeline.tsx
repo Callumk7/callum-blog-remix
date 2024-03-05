@@ -1,5 +1,4 @@
 import { Card } from "../layout/card";
-import { Separator } from "../layout/separator";
 
 export default function Timeline() {
   return (

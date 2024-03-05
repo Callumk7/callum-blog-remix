@@ -1,14 +1,13 @@
 ---
-name: "playQ Videogame Playlist Manager"
-description: "Create and share playlists to keep track of what you have been playing"
-coverImageUrl: "http://image.com"
-tags: ["react", "remix", "cloudflare", "supabase", "typescript"]
-caseStudyUrl: "link to article on this project"
-related: ["array", "of related", "articles"]
-tech: ["react", "postgres", "remix", "supabase", "nodejs", "typescript", "cloudflare"]
+title: "An Introduction to playQ: A Videogame Playlist Manager"
+description: "I have built an app for collecting, organising and sharing playlists of videogames with friends. Lets dive in and see what it can do."
+coverImageUrl: "https://images.unsplash.com/photo-1536244292405-630fd4dd38a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2848&q=80"
+date: "2024-02-25"
+tags: ["web development", "react", "remix", "playQ"]
+author:
+    name: "Callum Kloos"
+    imageUrl: "/avatar.jpeg"
 ---
-
-## Introduction to playQ
 
 PlayQ is a game management application that allows users to create and track lists of video games, known as playlists. It provides a comprehensive platform for users to keep track of games they've played, want to play, or are currently playing.
 
@@ -29,8 +28,3 @@ PlayQ is not just a game playlist management app, it's also a comprehensive lear
 **Radix-UI and Shad/cn Inspired Components** - To further refine the user interface, the app uses Radix-UI, a library of low-level, accessible and unstyled UI components for building high-quality web interfaces. The UI design is also influenced by ShaD/CN styled-components, favouring a modern and minimalist aesthetic.
 
 By using these technologies, PlayQ showcases how sophisticated tech stacks can be combined for efficient coding practices and superior user experience.
-
-## Database Design
-
-![[Database design.svg]]
-Utilised a many to many database design to enable many key features of the collection manager.

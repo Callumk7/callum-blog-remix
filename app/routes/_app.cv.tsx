@@ -1,3 +1,4 @@
+import { SkillsList } from "@/components/cv/skills-list";
 import { WorkExperience } from "@/components/cv/work-experience";
 import { Card } from "@/components/layout/card";
 import { Container } from "@/components/layout/container";
@@ -14,6 +15,16 @@ export const loader = () => {
   return json({ projects });
 };
 
+const skills = [
+  "react",
+  "remix",
+  "typescript",
+  "javascript",
+  "SQl (Postgres)",
+  "nodejs",
+  "nextjs",
+];
+
 export default function CVRoute() {
   const { projects } = useLoaderData<typeof loader>();
   return (
@@ -24,16 +35,22 @@ export default function CVRoute() {
         <SocialLinks />
       </Card>
       <div className="grid gap-3 lg:grid-cols-2">
-        <Card flex>
-          <h1>Projects</h1>
-          <p>
-            Here is a sample of projects that I have worked on. Click on them to learn
-            more, or explore the code on Github.
-          </p>
-          {projects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
-        </Card>
+        <div className="space-y-3">
+          <Card flex>
+            <h1>Projects</h1>
+            <p>
+              Here is a sample of projects that I have worked on. Click on them to learn
+              more, or explore the code on Github.
+            </p>
+            {projects.map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
+          </Card>
+          <Card>
+            <h1>Skills</h1>
+            <SkillsList skills={skills} />
+          </Card>
+        </div>
         <Card className="row-start-1 row-end-3" flex>
           <h1>Work History</h1>
           <WorkExperience

@@ -1,5 +1,6 @@
 import { Project } from "@/types";
 import { Card } from "../layout/card";
+import { Pill } from "../tags/pill";
 
 interface ProjectCardProps {
   project: Project;
@@ -13,17 +14,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
       asLink
       to={`/projects/${project.slug}`}
     >
+      <h1 className="font-syne text-xl font-bold text-primary-1">{project.name}</h1>
       <div className="flex flex-wrap gap-3">
         {project.tech.map((t) => (
-          <div
-            key={t}
-            className="rounded-full bg-white px-2 py-1 font-mono text-sm text-background"
-          >
-            {t}
-          </div>
+          <Pill key={t} tag={t} />
         ))}
       </div>
-      <h1 className="font-syne text-xl font-bold text-primary-1">{project.name}</h1>
       <p className="font-mono">{project.description}</p>
       <svg
         width="24"

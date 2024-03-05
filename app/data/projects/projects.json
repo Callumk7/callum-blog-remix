@@ -1,41 +1,13 @@
 [
   {
-    "name": "This Blog",
-    "description": "A place to showcase what I am working on, and learning",
-    "coverImageUrl": "http://image.com",
-    "tags": [
-      "react",
-      "ssr",
-      "remix"
-    ],
-    "caseStudyUrl": "link to article on this project",
-    "related": [
-      "array",
-      "of related",
-      "articles"
-    ],
-    "content": "<p>This is a sample project file, where I can write about projects I have completed. It is super important to remember that I am working hard on presenting this data well, and to be employable.</p>\n<h2>Introduction</h2>\n<p>The first step is a strong introduction.</p>\n<p><a href=\"/projects/playq-videogame-playlist-manager\">Test Link to PLAYQ</a></p>\n<h2>Outline</h2>\n<ul>\n<li>Problem</li>\n<li>Solution</li>\n<li>Difficulties</li>\n<li>Overcome</li>\n<li>Conclusion</li>\n</ul>\n",
-    "slug": "this-blog",
-    "tech": [
-      "react",
-      "ssr",
-      "remix",
-      "nodejs",
-      "typescript"
-    ]
-  },
-  {
     "name": "playQ Videogame Playlist Manager",
     "description": "Create and share playlists to keep track of what you have been playing",
     "coverImageUrl": "http://image.com",
     "tags": [
       "react",
-      "ssr",
-      "postgres",
       "remix",
+      "cloudflare",
       "supabase",
-      "hono",
-      "nodejs",
       "typescript"
     ],
     "caseStudyUrl": "link to article on this project",
@@ -48,12 +20,33 @@
     "slug": "playq-videogame-playlist-manager",
     "tech": [
       "react",
-      "ssr",
       "postgres",
       "remix",
       "supabase",
-      "hono",
       "nodejs",
+      "typescript",
+      "cloudflare"
+    ]
+  },
+  {
+    "name": "My Developer Portfolio",
+    "description": "This website! A space to showcase my completed and in-progress projects, host my blog, and share my photography",
+    "coverImageUrl": "http://image.com",
+    "tags": [
+      "react",
+      "remix"
+    ],
+    "caseStudyUrl": "link to article on this project",
+    "related": [
+      "array",
+      "of related",
+      "articles"
+    ],
+    "content": "<p>As a self-taught web developer, I needed a space to showcase my projects and skills to the world. I built this site to do just that.</p>\n<p>The site itself is built with the Remix framework (my full stack framework of choice), and all the code is available open source on Github.</p>\n<p>I opted for a clean, modern design. I want to keep things simple, and make sure that the content is front and centre. For more thoughts on the design, see my introduction blog post.</p>\n<p>I built a custom pipeline for building a JSON data schema from markdown blog posts using <code class=\"language-unknown\">matter</code> and <code class=\"language-unknown\">remark</code>. This means I have no external dependencies or database ORM to worry about, and all my inputs are fully typed with Typescript.</p>\n<p>Please enjoy exploring, and send me a message with any thoughts that you have.</p>\n",
+    "slug": "my-developer-portfolio",
+    "tech": [
+      "react",
+      "remix",
       "typescript"
     ]
   },
