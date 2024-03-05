@@ -9,6 +9,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Card
       className="transition-colors ease-in-out hover:bg-background-hover"
+      flex
       asLink
       to={`/projects/${project.slug}`}
     >

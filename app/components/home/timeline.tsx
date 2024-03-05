@@ -3,10 +3,10 @@ import { Separator } from "../layout/separator";
 
 export default function Timeline() {
   return (
-    <div className="flex divide-x divide-primary-1 w-full items-center">
+    <div className="flex w-full items-center divide-x divide-primary-1">
       <div className="flex w-full flex-col gap-y-7">
         <div className="flex w-full items-center">
-          <Card className="ml-20 w-full">
+          <Card className="ml-20 w-full" flex>
             <h1 className="font-syne font-black">Product Manager</h1>
             <p>
               Velit ipsum ut et id laboris excepteur esse ullamco dolore tempor veniam.
