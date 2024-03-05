@@ -22,6 +22,10 @@ const links = [
     href: "/projects",
   },
   {
+    name: "wip",
+    href: "/wip",
+  },
+  {
     name: "photography",
     href: "/photography",
   },
