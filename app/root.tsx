@@ -15,6 +15,11 @@ export const links: LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400&family=Syne:wght@400;700;800&display=swap",
   },
+  {
+    rel: "icon",
+    href: "/favicon.ico",
+    type: "image/ico",
+  },
 ];
 
 export const meta: MetaFunction = () => {
@@ -26,7 +31,8 @@ export const meta: MetaFunction = () => {
     },
     {
       name: "description",
-      content: "This is the personal website of Callum Kloos, a Product Designer and self-taught Web Developer.",
+      content:
+        "This is the personal website of Callum Kloos, a Product Designer and self-taught Web Developer.",
     },
   ];
 };
@@ -40,7 +46,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-background text-foreground font-grotesk">
+      <body className="bg-background font-grotesk text-foreground">
         <Outlet />
         <ScrollRestoration />
         <Scripts />

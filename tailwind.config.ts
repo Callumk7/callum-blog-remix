@@ -11,16 +11,17 @@ export default {
 				grotesk: ["Space Grotesk", "sans-serif"],
 			},
 			fontSize: {
-				'2vw': "2vw",
-				'3vw': "3vw",
-				'4vw': "4vw",
-				'5vw': "5vw",
-				'6vw': "6vw",
+				"2vw": "2vw",
+				"3vw": "3vw",
+				"4vw": "4vw",
+				"5vw": "5vw",
+				"6vw": "6vw",
 			},
 			colors: {
 				background: {
 					DEFAULT: "hsl(var(--background))",
 					hover: "hsl(var(--background-hover))",
+					accent: "hsl(var(--background-accent))",
 				},
 				foreground: "hsl(var(--foreground))",
 				primary: {

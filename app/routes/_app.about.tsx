@@ -10,8 +10,9 @@ export default function AboutPage() {
           <Profile />
           <div className="prose prose-invert col-span-2 max-w-none">
             <p>
-              Hi, and thanks for stopping by. My name is Callum and I am a self taught web
-              developer specialising in building full stack applications with{" "}
+              Hi, and thanks for stopping by. My name is{" "}
+              <span className="font-bold text-primary-2">Callum</span> and I am a self
+              taught web developer specialising in building full stack applications with{" "}
               <a href="https://remix.run">Remix</a>, <a href="https://react.dev">React</a>{" "}
               and <a href="https://www.typescriptlang.org">Typescript</a>. Checkout my
               projects in the Project section, or leave a message!
