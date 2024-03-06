@@ -29,7 +29,7 @@ export function Card({
 }: CardProps) {
   const cn = clsx(
     className,
-    { "flex flex-col gap-3": flex },
+    { "flex flex-col gap-4": flex },
     "relative rounded-md border border-foreground/20 p-6",
   );
 
