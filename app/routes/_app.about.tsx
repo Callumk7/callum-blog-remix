@@ -27,7 +27,7 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-        <div className="hidden w-4/5 lg:inline">
+        <div className="hidden lg:inline">
           <Timeline />
         </div>
       </Container>
