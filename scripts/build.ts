@@ -57,9 +57,20 @@ const getProjectDataFromFile = async (filePath: PathLike): Promise<Project> => {
 	// perform the content transformation here, to improve request time
 	const htmlContent = await markdownToHtml(content);
 
-	const { name, description, projectUrl, coverImageUrl, tags, caseStudyUrl, related, tech } = data;
+	const {
+		name,
+		shortName,
+		description,
+		projectUrl,
+		coverImageUrl,
+		tags,
+		caseStudyUrl,
+		related,
+		tech,
+	} = data;
 	if (
 		!name ||
+		!shortName ||
 		!description ||
 		!coverImageUrl ||
 		!tags ||
@@ -74,6 +85,7 @@ const getProjectDataFromFile = async (filePath: PathLike): Promise<Project> => {
 
 	return {
 		name,
+		shortName,
 		description,
 		projectUrl,
 		coverImageUrl,
@@ -153,7 +165,7 @@ const buildJson = async (postFolder: string, projectsFolder: string) => {
 	writeToFile(projectsData, "app/data/projects/projects.json");
 };
 
-console.time("script")
+console.time("script");
 await buildJson("posts", "projects");
-console.timeEnd("script")
+console.timeEnd("script");
 console.log("Write complete, all files are in JSON format");
