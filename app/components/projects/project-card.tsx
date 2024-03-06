@@ -9,18 +9,18 @@ interface ProjectCardProps {
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Card
-      className="transition-colors ease-in-out hover:bg-background-hover"
+      className="content-stretch pb-14 transition-colors ease-in-out hover:bg-background-hover"
       flex
       asLink
       to={`/projects/${project.slug}`}
     >
-      <h1 className="font-syne text-xl font-bold text-primary-1">{project.name}</h1>
+      <h1 className="pb-3 font-syne text-2xl font-bold text-primary-1">{project.name}</h1>
+      <p className="pb-2 font-mono">{project.description}</p>
       <div className="flex flex-wrap gap-3">
         {project.tech.map((t) => (
           <Pill key={t} tag={t} />
         ))}
       </div>
-      <p className="font-mono">{project.description}</p>
       <svg
         width="24"
         height="24"

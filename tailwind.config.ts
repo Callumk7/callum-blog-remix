@@ -29,6 +29,8 @@ export default {
 					2: "hsl(var(--primary-2))",
 					3: "hsl(var(--primary-3))",
 				},
+				ring: "hsl(var(--ring))",
+				accent: "hsl(var(--accent))",
 			},
 		},
 	},

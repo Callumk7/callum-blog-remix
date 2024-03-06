@@ -12,6 +12,9 @@
 	--primary-1: 67 100% 84%;
 	--primary-2: 67 100% 76%;
 	--primary-3: 67 95% 67%;
+
+    --ring: 65 8% 95%;
+    --accent: 180 5% 10%;
 }
 
 /* some default styles */
