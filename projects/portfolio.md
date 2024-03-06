@@ -1,5 +1,6 @@
 ---
 name: "My Developer Portfolio"
+shortName: "portfolio"
 description: "This website! A space to showcase my completed and in-progress projects, host my blog, and share my photography"
 coverImageUrl: "http://image.com"
 tags: ["react", "remix"]

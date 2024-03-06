@@ -1,5 +1,6 @@
 ---
 name: "This Little Piggy Richmond"
+shortName: "thislittlepiggyrichmond"
 description: "Animal Rescue Charity focusing on Guinea Pigs"
 projectUrl: "https://thislittlepiggyrichmond.co.uk"
 coverImageUrl: "http://image.com"
@@ -26,7 +27,6 @@ Due to the client's non-technical background, we aimed to integrate a user-frien
 For the web application to remain relevant and timely, it was crucial to facilitate dynamic data representation, updated at the point of request. Therefore, a server-side rendering approach was more suitable than a built-dependent statically generated approach, although the latter might have been more performant.
 
 **Technology Utilised**
-
 
 | Requirement         | Selection | Justification                                                                                        |
 | ------------------- | --------- | ---------------------------------------------------------------------------------------------------- |

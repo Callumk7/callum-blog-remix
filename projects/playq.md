@@ -1,7 +1,9 @@
 ---
 name: "playQ Videogame Playlist Manager"
+shortName: "playq"
 description: "Create and share playlists to keep track of what you have been playing"
 coverImageUrl: "http://image.com"
+projectUrl: "https://playq.xyz"
 tags: ["react", "remix", "cloudflare", "supabase", "typescript"]
 caseStudyUrl: "link to article on this project"
 related: ["array", "of related", "articles"]
