@@ -46,7 +46,7 @@ export default function ProjectLayout() {
         </div>
         <div className="relative w-full xl:col-span-3">
           <div className="xl:fixed">
-            <div className="grid grid-cols-2 gap-3 lg:grid-cols-1 xl:max-w-sm">
+            <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-1 xl:max-w-sm">
               <div className="mb-10 hidden xl:inline">
                 <ProjectDetailsCard project={project} />
               </div>

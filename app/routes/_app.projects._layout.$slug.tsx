@@ -12,6 +12,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { getProjectImageSrcs } from "@/lib/images/get-project-images";
+import { useEffect, useState } from "react";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
@@ -32,11 +33,29 @@ export const loader = ({ params }: LoaderFunctionArgs) => {
 
 export default function ProjectsPage() {
   const { project, images } = useLoaderData<typeof loader>();
+
+  // Window width for carousel arrows. This will move to a carousel component
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleWindowResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowResize);
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
   return (
     <Container width={"max"}>
-      <h1 className="font-syne text-4xl font-black text-primary-1">{project.name}</h1>
+      <h1 className="font-syne text-2xl font-black text-primary-1 md:text-4xl">
+        {project.name}
+      </h1>
       {images && images.length > 0 && (
-        <Carousel className="mx-auto my-10 w-4/5">
+        <Carousel className="mx-auto my-10 md:w-4/5">
           <CarouselContent>
             {images.map((image) => (
               <CarouselItem key={image}>
@@ -49,8 +68,12 @@ export default function ProjectsPage() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          {windowWidth > 768 && (
+            <>
+              <CarouselPrevious />
+              <CarouselNext />
+            </>
+          )}
         </Carousel>
       )}
       <PostBody content={project.content} />

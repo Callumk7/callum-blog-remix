@@ -4,8 +4,8 @@ import { cva, VariantProps } from "class-variance-authority";
 const containerVariants = cva("flex flex-col gap-10", {
   variants: {
     width: {
-      normal: "mx-auto md:w-10/12 lg:w-4/5",
-      wide: "mx-auto md:w-11/12 lg:w-10/12",
+      normal: "mx-auto w-10/12 lg:w-4/5",
+      wide: "mx-auto w-11/12 lg:w-10/12",
       max: "w-full"
     },
     space: {
