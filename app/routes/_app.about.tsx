@@ -1,5 +1,4 @@
 import Profile from "@/components/about/profile";
-import Timeline from "@/components/home/timeline";
 import { Container } from "@/components/layout/container";
 
 export default function AboutPage() {
@@ -26,9 +25,6 @@ export default function AboutPage() {
               running. Reach out and lets connect!
             </p>
           </div>
-        </div>
-        <div className="hidden lg:inline">
-          <Timeline />
         </div>
       </Container>
     </div>

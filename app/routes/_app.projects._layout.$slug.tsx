@@ -12,7 +12,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { getProjectImageSrcs } from "@/lib/images/get-project-images";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
@@ -34,46 +34,27 @@ export const loader = ({ params }: LoaderFunctionArgs) => {
 export default function ProjectsPage() {
   const { project, images } = useLoaderData<typeof loader>();
 
-  // Window width for carousel arrows. This will move to a carousel component
-
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  const handleWindowResize = () => {
-    setWindowWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowResize);
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
-
   return (
     <Container width={"max"}>
       <h1 className="font-syne text-2xl font-black text-primary-1 md:text-4xl">
         {project.name}
       </h1>
       {images && images.length > 0 && (
-        <Carousel className="mx-auto my-10 md:w-4/5">
+        <Carousel className="mx-auto my-10 w-full md:w-4/5">
           <CarouselContent>
             {images.map((image) => (
               <CarouselItem key={image}>
                 <figure>
                   <div className="overflow-hidden rounded-lg border">
-                    <img src={image} />
+                    <img src={image} className="h-full w-full object-cover object-center" />
                   </div>
                   <figcaption className="mt-3 text-center font-mono">{image}</figcaption>
                 </figure>
               </CarouselItem>
             ))}
           </CarouselContent>
-          {windowWidth > 768 && (
-            <>
-              <CarouselPrevious />
-              <CarouselNext />
-            </>
-          )}
+          <CarouselPrevious />
+          <CarouselNext />
         </Carousel>
       )}
       <PostBody content={project.content} />
