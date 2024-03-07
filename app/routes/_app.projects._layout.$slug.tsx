@@ -52,8 +52,8 @@ export default function ProjectsPage() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:inline" />
-          <CarouselNext className="hidden md:inline" />
+          <CarouselPrevious className="hidden md:inline-flex" />
+          <CarouselNext className="hidden md:inline-flex" />
         </Carousel>
       )}
       <PostBody content={project.content} />

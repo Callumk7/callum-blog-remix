@@ -1,6 +1,7 @@
 interface Post {
 	title: string;
 	description: string;
+	projectShortName?: string;
 	content: string;
 	coverImageUrl: string;
 	date: string;
@@ -18,11 +19,11 @@ interface Project {
 	name: string;
 	shortName: string;
 	description: string;
-	projectUrl?: string;
+	projectUrl?: string; // external link to deployed project
+	githubUrl: string; // github project link
 	coverImageUrl: string;
 	tags: string[];
 	caseStudyUrl: string;
-	related: string[];
 	slug: string;
 	content: string;
 	tech: string[];

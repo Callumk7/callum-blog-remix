@@ -2,10 +2,11 @@ import { Card } from "@/components/layout/card";
 import { Separator } from "@/components/layout/separator";
 import { ProjectCard } from "@/components/projects/project-card";
 import { Pill } from "@/components/tags/pill";
+import { getProjectPosts } from "@/features/projects/get-project-posts";
 import { getAllProjectData } from "@/features/projects/get-projects";
-import { Project } from "@/types";
+import { Post, Project } from "@/types";
 import { LoaderFunctionArgs, json } from "@remix-run/node";
-import { Outlet, useLoaderData } from "@remix-run/react";
+import { Link, Outlet, useLoaderData } from "@remix-run/react";
 
 ///
 /// LOADER
@@ -19,7 +20,10 @@ export const loader = ({ params }: LoaderFunctionArgs) => {
   const project = projects.find((proj) => proj.slug === slug)!;
   projects = projects.filter((project) => project.slug !== slug);
 
-  return json({ projects, project });
+  // get related post information
+  const relatedPosts = getProjectPosts(project.shortName);
+
+  return json({ projects, project, relatedPosts });
 };
 
 // force revalidation (refetch sidebar)
@@ -29,14 +33,14 @@ export const shouldRevalidate = () => true;
 /// RENDER FUNCTION
 ///
 export default function ProjectLayout() {
-  const { projects, project } = useLoaderData<typeof loader>();
+  const { projects, project, relatedPosts } = useLoaderData<typeof loader>();
 
   return (
     <>
-      <div className="xl:grid xl:gap-14 xl:grid-cols-8">
+      <div className="xl:grid xl:grid-cols-8 xl:gap-14">
         <div className="w-full xl:col-span-5">
           <div className="mb-10 xl:hidden">
-            <ProjectDetailsCard project={project} />
+            <ProjectDetailsCard project={project} relatedPosts={relatedPosts} />
           </div>
           <Outlet />
         </div>
@@ -48,7 +52,7 @@ export default function ProjectLayout() {
           <div className="xl:fixed">
             <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-1 xl:max-w-sm">
               <div className="mb-10 hidden xl:inline">
-                <ProjectDetailsCard project={project} />
+                <ProjectDetailsCard project={project} relatedPosts={relatedPosts} />
               </div>
               <h3 className="hidden pb-4 pt-10 font-syne text-lg font-bold xl:inline">
                 Other Projects
@@ -64,16 +68,32 @@ export default function ProjectLayout() {
   );
 }
 
-function ProjectDetailsCard({ project }: { project: Project }) {
+function ProjectDetailsCard({
+  project,
+  relatedPosts,
+}: {
+  project: Project;
+  relatedPosts: Post[];
+}) {
   return (
     <Card flex>
-      <a href={project.projectUrl} className="text-primary-2 underline">
+      <a href={project.projectUrl} className="link">
         {project.projectUrl}
       </a>
+      <Link className="link" to={project.caseStudyUrl}>
+        Introduction Post
+      </Link>
       <p>{project.description}</p>
       <div className="flex flex-wrap gap-3">
         {project.tech.map((t) => (
           <Pill key={t} tag={t} />
+        ))}
+      </div>
+      <div className="flex flex-col gap-3">
+        {relatedPosts.map((post) => (
+          <Link to={`/blog/${post.slug}`} key={post.slug} className="link">
+            {post.title}
+          </Link>
         ))}
       </div>
     </Card>

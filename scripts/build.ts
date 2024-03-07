@@ -27,16 +27,19 @@ const getPostDataFromFile = async (filePath: PathLike): Promise<Post> => {
 	// perform the content transformation here, to improve request time
 	const htmlContent = await markdownToHtml(content);
 
-	const { title, description, coverImageUrl, date, author, tags } = data;
+	const { title, description, projectShortName, coverImageUrl, date, author, tags } =
+		data;
 	if (!title || !description || !coverImageUrl || !date || !author || !tags) {
 		throw new Error("A required field is missing");
 	}
 
 	const slug = createSlug(title as string);
 
+	console.log(`data retrieved for ${title}`);
 	return {
 		title,
 		description,
+		projectShortName,
 		content: htmlContent,
 		coverImageUrl,
 		date,
@@ -62,20 +65,20 @@ const getProjectDataFromFile = async (filePath: PathLike): Promise<Project> => {
 		shortName,
 		description,
 		projectUrl,
+		githubUrl,
 		coverImageUrl,
 		tags,
 		caseStudyUrl,
-		related,
 		tech,
 	} = data;
 	if (
 		!name ||
 		!shortName ||
 		!description ||
+		!githubUrl ||
 		!coverImageUrl ||
 		!tags ||
 		!caseStudyUrl ||
-		!related ||
 		!tech
 	) {
 		throw new Error("A required field is missing");
@@ -83,15 +86,16 @@ const getProjectDataFromFile = async (filePath: PathLike): Promise<Project> => {
 
 	const slug = createSlug(name as string);
 
+	console.log(`data retrieved for ${name}`);
 	return {
 		name,
 		shortName,
 		description,
 		projectUrl,
+		githubUrl,
 		coverImageUrl,
 		tags,
 		caseStudyUrl,
-		related,
 		content: htmlContent,
 		slug,
 		tech,
@@ -126,14 +130,17 @@ const writeTagsToFile = (tags: string[], fileName: string) => {
 
 const buildJson = async (postFolder: string, projectsFolder: string) => {
 	const postFileNames = getFilenamesFromFolder(postFolder);
-	const postData: Post[] = [];
+	let postData: Post[] = [];
+	const postPromises = [];
 	for (const fileName of postFileNames) {
 		console.log(`Getting data from ${fileName}`);
-		postData.push(
-			await getPostDataFromFile(path.join(process.cwd(), postFolder, fileName)),
+		postPromises.push(
+			getPostDataFromFile(path.join(process.cwd(), postFolder, fileName)),
 		);
-		console.log(`data retrieved for ${fileName}`);
 	}
+
+	postData = await Promise.all(postPromises);
+	console.log("all data retrieved");
 
 	const postTags: string[] = [];
 	for (const post of postData) {
@@ -145,16 +152,17 @@ const buildJson = async (postFolder: string, projectsFolder: string) => {
 
 	// now we can handle projects
 	const projectFileNames = getFilenamesFromFolder(projectsFolder);
-	const projectsData: Project[] = [];
+	let projectsData: Project[] = [];
+	const projectPromises = [];
 	for (const fileName of projectFileNames) {
 		console.log(`Getting data from ${fileName}`);
-		projectsData.push(
-			await getProjectDataFromFile(
-				path.join(process.cwd(), projectsFolder, fileName),
-			),
+		projectPromises.push(
+			getProjectDataFromFile(path.join(process.cwd(), projectsFolder, fileName)),
 		);
-		console.log(`data retrieved for ${fileName}`);
 	}
+
+	projectsData = await Promise.all(projectPromises);
+	console.log("all data retrieved");
 
 	const projectTags: string[] = [];
 	for (const project of projectsData) {

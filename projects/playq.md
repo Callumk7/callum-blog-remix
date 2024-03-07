@@ -4,9 +4,15 @@ shortName: "playq"
 description: "Create and share playlists to keep track of what you have been playing"
 coverImageUrl: "http://image.com"
 projectUrl: "https://playq.xyz"
+githubUrl: "https://github.com/Callumk7/frontline-v2-remix"
 tags: ["react", "remix", "cloudflare", "supabase", "typescript"]
-caseStudyUrl: "link to article on this project"
-related: ["array", "of related", "articles"]
+caseStudyUrl: "/blog/introducing-playq-a-cuttingedge-videogame-playlist-manager"
+related:
+    [
+        "/blog/introducing-playq-a-cuttingedge-videogame-playlist-manager",
+        "/blog/something-about-playq",
+        "/blog/another-update-of-interest",
+    ]
 tech: ["react", "postgres", "remix", "supabase", "nodejs", "typescript", "cloudflare"]
 ---
 

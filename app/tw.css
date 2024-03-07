@@ -13,14 +13,17 @@
 	--primary-2: 67 100% 76%;
 	--primary-3: 67 95% 67%;
 
-    --ring: 65 8% 95%;
-    --accent: 180 5% 10%;
+	--ring: 65 8% 95%;
+	--accent: 180 5% 10%;
 }
 
 /* some default styles */
 @layer base {
 	h1 {
 		@apply text-4xl font-black;
+	}
+	.link {
+		@apply text-primary-1 underline transition-colors ease-in-out hover:text-violet-400;
 	}
 }
 

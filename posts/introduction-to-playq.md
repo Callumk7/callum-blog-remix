@@ -1,6 +1,7 @@
 ---
 title: "Introducing playQ: A Cutting-Edge Videogame Playlist Manager"
 description: "playQ is a groundbreaking application designed to revolutionize the way gamers organize and share their video game collections. Leveraging the latest technologies, playQ offers an unparalleled experience for managing and exploring video game playlists."
+projectShortName: "playq"
 coverImageUrl: "https://images.unsplash.com/photo-1536244292405-630fd4dd38a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2848&q=80"
 date: "2024-02-25"
 tags: ["web development", "react", "remix", "playQ", "supabase", "drizzleorm", "radix-ui"]
@@ -9,7 +10,7 @@ author:
     imageUrl: "/avatar.jpeg"
 ---
 
-At its core, playQ is a sophisticated game management platform that empowers users to create, curate, and share personalized playlists of video games. With an intuitive interface and robust feature set, playQ redefines the way gamers interact with their collections, fostering a more immersive and social gaming experience.
+At its core, [playQ](/projects/playq-videogame-playlist-manager)  is a sophisticated game management platform that empowers users to create, curate, and share personalized playlists of video games. With an intuitive interface and robust feature set, playQ redefines the way gamers interact with their collections, fostering a more immersive and social gaming experience.
 
 One of playQ's standout features is its comprehensive rating system, enabling users to assign personal ratings to games within their playlists. This powerful functionality not only allows for in-depth comparisons between titles but also facilitates informed decision-making when selecting the next game to play.
 

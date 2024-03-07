@@ -5,6 +5,8 @@ description: "This website! A space to showcase my completed and in-progress pro
 coverImageUrl: "http://image.com"
 tags: ["react", "remix"]
 caseStudyUrl: "link to article on this project"
+githubUrl: "https://github.com/Callumk7/callum-blog-remix"
+projectUrl: "https://callum.kloos.com"
 related: ["array", "of related", "articles"]
 tech: ["react", "remix", "typescript"]
 ---

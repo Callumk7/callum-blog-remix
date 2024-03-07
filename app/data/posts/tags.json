@@ -12,5 +12,9 @@
   "svelte": 1,
   "typescript": 2,
   "hooks": 1,
-  "performance": 1
+  "performance": 1,
+  "Supabase": 1,
+  "Firebase": 1,
+  "Game Management": 1,
+  "Playlist": 1
 }
