@@ -5,10 +5,8 @@ export default function AppLayout() {
   return (
     <main>
       <Navbar />
-      <div className="flex min-h-screen mx-auto w-4/5 flex-col">
-        <div className="my-28">
-          <Outlet />
-        </div>
+      <div className="mx-auto mb-28 min-h-screen w-4/5 pt-28">
+        <Outlet />
       </div>
     </main>
   );

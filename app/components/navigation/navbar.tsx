@@ -22,10 +22,6 @@ const links = [
     href: "/projects",
   },
   {
-    name: "wip",
-    href: "/wip",
-  },
-  {
     name: "photography",
     href: "/photography",
   },
@@ -76,15 +72,11 @@ export function Navbar() {
           MENU
         </CollapsibleTrigger>
         <CollapsibleContent>
-          <div className="mt-4 flex flex-col gap-3">
-            {linksMarkup}
-          </div>
+          <div className="mt-4 flex flex-col gap-3">{linksMarkup}</div>
         </CollapsibleContent>
       </Collapsible>
-      <div className="hidden flex-row justify-evenly md:flex">
-        {linksMarkup}
-      </div>
-      <SocialLinks className="self-stretch" />
+      <div className="hidden flex-row justify-evenly md:flex">{linksMarkup}</div>
+      <SocialLinks className="mt-2 self-start" />
     </nav>
   );
 }

@@ -15,7 +15,7 @@ export default function ProjectsIndex() {
   const { projects } = useLoaderData<typeof loader>();
 
   return (
-    <Container>
+    <Container width={"mobMax"}>
       <Title title="Projects" />
       <ProjectTable projects={projects} />
     </Container>

@@ -14,7 +14,7 @@ export const loader = (_args: LoaderFunctionArgs) => {
 export default function AppIndex() {
   const { recentPosts } = useLoaderData<typeof loader>();
   return (
-    <Container className="my-10">
+    <Container className="my-10" width={"mobMax"}>
       <div className="gap-x-4 lg:grid lg:grid-cols-2">
         <Portrait />
         <PostList posts={recentPosts} />

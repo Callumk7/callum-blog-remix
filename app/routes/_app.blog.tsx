@@ -3,7 +3,7 @@ import { Outlet } from "@remix-run/react";
 
 export default function BlogLayout() {
   return (
-    <Container>
+    <Container width={"max"}>
       <Outlet />
     </Container>
   );

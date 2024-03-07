@@ -12,7 +12,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { getProjectImageSrcs } from "@/lib/images/get-project-images";
-import { useEffect, useLayoutEffect, useState } from "react";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
@@ -53,8 +52,8 @@ export default function ProjectsPage() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="hidden md:inline" />
+          <CarouselNext className="hidden md:inline" />
         </Carousel>
       )}
       <PostBody content={project.content} />

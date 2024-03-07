@@ -8,7 +8,7 @@ export function Title({ title, centered }: TitleProps) {
     <h1
       className={`${
         centered && "mx-auto w-4/5"
-      } md:leading-14 font-syne text-3xl font-extrabold leading-9 tracking-tight sm:text-4xl sm:leading-10 md:text-6xl`}
+      } font-syne text-5xl font-extrabold tracking-tight md:text-5vw`}
     >
       {title}
     </h1>

@@ -31,29 +31,29 @@ export default function BlogPostPage() {
   const date = new Date(post.date).toDateString();
 
   return (
-    <div className="relative">
-      <div className="relative mx-auto aspect-square w-1/2 overflow-hidden rounded-md">
+    <>
+      <div className="relative mx-auto aspect-square overflow-hidden rounded-md md:w-1/2">
         <img
           src={post.coverImageUrl}
           alt="cover image"
           className="h-full w-full object-cover object-center"
         />
       </div>
-      <Container>
-        <p className="w-full py-2 text-center text-sm text-foreground/80">{date}</p>
-        <div className="mx-auto mt-5 flex w-fit flex-row gap-x-5">
-          {post.tags.map((tag) => (
-            <span
-              className="rounded-full bg-white px-2 py-1 font-mono text-sm text-background"
-              key={tag}
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+      <div className="mx-auto mt-5 flex w-fit flex-wrap gap-3">
+        {post.tags.map((tag) => (
+          <span
+            className="rounded-full bg-white px-2 py-1 font-mono text-sm text-background"
+            key={tag}
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+      <div className="flex flex-col gap-1">
+        <p className="w-full text-sm text-foreground/80">{date}</p>
         <PostTitle title={post.title} />
-      </Container>
+      </div>
       <PostBody content={post.content} />
-    </div>
+    </>
   );
 }

@@ -33,7 +33,7 @@ export default function ProjectLayout() {
 
   return (
     <>
-      <div className="grid gap-14 xl:grid-cols-8">
+      <div className="xl:grid xl:gap-14 xl:grid-cols-8">
         <div className="w-full xl:col-span-5">
           <div className="mb-10 xl:hidden">
             <ProjectDetailsCard project={project} />
