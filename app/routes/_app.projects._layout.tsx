@@ -1,6 +1,7 @@
 import { Card } from "@/components/layout/card";
 import { Separator } from "@/components/layout/separator";
 import { ProjectCard } from "@/components/projects/project-card";
+import { ProjectSidebarCard } from "@/components/projects/project-sidebar-card";
 import { Pill } from "@/components/tags/pill";
 import { getProjectPosts } from "@/features/projects/get-project-posts";
 import { getAllProjectData } from "@/features/projects/get-projects";
@@ -51,15 +52,23 @@ export default function ProjectLayout() {
         <div className="relative w-full xl:col-span-3">
           <div className="xl:fixed">
             <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-1 xl:max-w-sm">
-              <div className="mb-10 hidden xl:inline">
+              <div className="mb-7 hidden xl:inline">
                 <ProjectDetailsCard project={project} relatedPosts={relatedPosts} />
               </div>
               <h3 className="hidden pb-4 pt-10 font-syne text-lg font-bold xl:inline">
                 Other Projects
               </h3>
-              {projects.map((project) => (
-                <ProjectCard key={project.slug} project={project} />
-              ))}
+              <Card flex>
+                {projects.map((project) => (
+                  <Link
+                    className="link"
+                    to={`/projects/${project.slug}`}
+                    key={project.slug}
+                  >
+                    {project.name}
+                  </Link>
+                ))}
+              </Card>
             </div>
           </div>
         </div>

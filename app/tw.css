@@ -19,9 +19,6 @@
 
 /* some default styles */
 @layer base {
-	h1 {
-		@apply text-4xl font-black;
-	}
 	.link {
 		@apply text-primary-1 underline transition-colors ease-in-out hover:text-violet-400;
 	}
