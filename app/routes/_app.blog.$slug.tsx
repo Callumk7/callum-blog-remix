@@ -1,4 +1,3 @@
-import { Container } from "@/components/layout/container";
 import { PostBody } from "@/components/posts/post-body";
 import { PostTitle } from "@/components/posts/post-title";
 import { LoaderFunctionArgs, json } from "@remix-run/node";
@@ -7,6 +6,8 @@ import type { LinksFunction } from "@remix-run/node";
 
 import styles from "@/styles/prism.css";
 import { getPostBySlug } from "@/features/posts/get-posts";
+import { CoverImage } from "@/components/posts/cover-image";
+import { Pill } from "@/components/tags/pill";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
@@ -32,21 +33,10 @@ export default function BlogPostPage() {
 
   return (
     <>
-      <div className="relative mx-auto aspect-square overflow-hidden rounded-md md:w-1/2">
-        <img
-          src={post.coverImageUrl}
-          alt="cover image"
-          className="h-full w-full object-cover object-center"
-        />
-      </div>
+      <CoverImage imageUrl={post.coverImageUrl} altText={post.title} />
       <div className="mx-auto mt-5 flex w-fit flex-wrap gap-3">
         {post.tags.map((tag) => (
-          <span
-            className="rounded-full bg-white px-2 py-1 font-mono text-sm text-background"
-            key={tag}
-          >
-            {tag}
-          </span>
+          <Pill key={tag} tag={tag} />
         ))}
       </div>
       <div className="flex flex-col gap-1">

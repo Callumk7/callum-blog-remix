@@ -13,7 +13,7 @@ tech: ["react", "nextjs", "notion"]
 
 **Introduction**
 
-"This Little Piggy Richmond" is a local charity dedicated to the rescue and rehoming of vulnerable guinea pigs throughout London and beyond. They operate a responsible rehoming scheme, ensuring that each guinea pig is placed in a safe, sustainable environment.
+**This Little Piggy Richmond** is a local charity dedicated to the rescue and rehoming of vulnerable guinea pigs throughout London and beyond. They operate a responsible rehoming scheme, ensuring that each guinea pig is placed in a safe, sustainable environment.
 
 **Need**
 

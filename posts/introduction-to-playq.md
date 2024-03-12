@@ -2,7 +2,7 @@
 title: "Introducing playQ: A Cutting-Edge Videogame Playlist Manager"
 description: "playQ is a groundbreaking application designed to revolutionize the way gamers organize and share their video game collections. Leveraging the latest technologies, playQ offers an unparalleled experience for managing and exploring video game playlists."
 projectShortName: "playq"
-coverImageUrl: "https://images.unsplash.com/photo-1536244292405-630fd4dd38a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2848&q=80"
+coverImageUrl: "/images/projects/playq/1.png"
 date: "2024-02-25"
 tags: ["web development", "react", "remix", "playQ", "supabase", "drizzleorm", "radix-ui"]
 author:

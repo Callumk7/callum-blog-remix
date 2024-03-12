@@ -4,7 +4,7 @@ import { TagList } from "@/components/tags/tag-list";
 import { getAllPostData } from "@/features/posts/get-posts";
 import { getTags } from "@/features/posts/get-tags";
 import { json } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 
 export const loader = () => {
   const posts = getAllPostData();
