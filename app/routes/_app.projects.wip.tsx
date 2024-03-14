@@ -23,7 +23,7 @@ export default function WipProjects() {
           This is the stuff that is not ready for presentation. Ideas, tinkering projects,
           or just need more thought. If you have some ideas, please do reach out!
           Otherwise{" "}
-          <Link to={"/projects/wip"} className="link">
+          <Link to={"/projects"} className="link">
             Head back to the projects page
           </Link>
           ,{" "}for the good stuff.
