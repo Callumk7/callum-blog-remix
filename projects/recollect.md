@@ -1,20 +1,15 @@
 ---
-name: "playQ Videogame Playlist Manager"
-shortName: "playq"
-description: "Create and share playlists to keep track of what you have been playing"
+name: "ReCollect Social Journalling"
+shortName: "recollect"
+description: "Build a habit, remember together"
 coverImageUrl: "http://image.com"
-projectUrl: "https://playq.xyz"
+projectUrl: "https://recollect.dev"
 githubUrl: "https://github.com/Callumk7/frontline-v2-remix"
 tags: ["react", "remix", "cloudflare", "supabase", "typescript"]
 caseStudyUrl: "/blog/introducing-playq-a-cuttingedge-videogame-playlist-manager"
-related:
-    [
-        "/blog/introducing-playq-a-cuttingedge-videogame-playlist-manager",
-        "/blog/something-about-playq",
-        "/blog/another-update-of-interest",
-    ]
+related: [""]
 tech: ["react", "postgres", "remix", "supabase", "nodejs", "typescript", "cloudflare"]
-wip: false
+wip: true
 ---
 
 ## Introduction to playQ

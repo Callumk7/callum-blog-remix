@@ -1,9 +1,9 @@
 {
-  "react": 3,
-  "remix": 2,
-  "cloudflare": 1,
-  "supabase": 1,
-  "typescript": 1,
+  "react": 4,
+  "remix": 3,
+  "cloudflare": 2,
+  "supabase": 2,
+  "typescript": 2,
   "ssr": 1,
   "nextjs": 1
 }

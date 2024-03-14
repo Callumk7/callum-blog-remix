@@ -9,6 +9,7 @@ githubUrl: "https://github.com/Callumk7/callum-blog-remix"
 projectUrl: "https://callum.kloos.com"
 related: ["array", "of related", "articles"]
 tech: ["react", "remix", "typescript"]
+wip: false
 ---
 
 As a self-taught web developer, I needed a space to showcase my projects and skills to the world. I built this site to do just that.

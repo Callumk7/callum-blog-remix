@@ -9,6 +9,7 @@ caseStudyUrl: "link to article on this project"
 githubUrl: "https://github.com/Callumk7/my-little-piggy-homepage"
 related: ["array", "of related", "articles"]
 tech: ["react", "nextjs", "notion"]
+wip: false
 ---
 
 **Introduction**

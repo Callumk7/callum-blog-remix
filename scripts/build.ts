@@ -57,6 +57,8 @@ const getProjectDataFromFile = async (filePath: PathLike): Promise<Project> => {
 		throw new Error("File missing required content");
 	}
 
+	checkRequiredFields(data);
+
 	// perform the content transformation here, to improve request time
 	const htmlContent = await markdownToHtml(content);
 
@@ -70,19 +72,8 @@ const getProjectDataFromFile = async (filePath: PathLike): Promise<Project> => {
 		tags,
 		caseStudyUrl,
 		tech,
+		wip,
 	} = data;
-	if (
-		!name ||
-		!shortName ||
-		!description ||
-		!githubUrl ||
-		!coverImageUrl ||
-		!tags ||
-		!caseStudyUrl ||
-		!tech
-	) {
-		throw new Error("A required field is missing");
-	}
 
 	const slug = createSlug(name as string);
 
@@ -99,6 +90,7 @@ const getProjectDataFromFile = async (filePath: PathLike): Promise<Project> => {
 		content: htmlContent,
 		slug,
 		tech,
+		wip,
 	};
 };
 
@@ -177,3 +169,23 @@ console.time("script");
 await buildJson("posts", "projects");
 console.timeEnd("script");
 console.log("Write complete, all files are in JSON format");
+
+function checkRequiredFields(fields: Record<string, unknown>) {
+	const fieldNames = [
+		"name",
+		"shortName",
+		"description",
+		"githubUrl",
+		"coverImageUrl",
+		"tags",
+		"caseStudyUrl",
+		"tech",
+		"wip",
+	];
+
+	fieldNames.forEach((field) => {
+		if (fields[field] === undefined || fields[field] === null) {
+			throw new Error(`The '${field}' field is missing`);
+		}
+	});
+}

@@ -8,25 +8,25 @@ import { Link, useLoaderData } from "@remix-run/react";
 export const loader = () => {
   const allProjects = getAllProjectData();
 
-  const projects = allProjects.filter((project) => !project.wip);
+  const projects = allProjects.filter((project) => project.wip);
 
   return json({ projects });
 };
 
-export default function ProjectsIndex() {
+export default function WipProjects() {
   const { projects } = useLoaderData<typeof loader>();
-
   return (
     <Container width={"mobMax"}>
-      <Title title="Projects" />
+      <Title title="Work In Progress" />
       <div className="prose prose-invert max-w-none">
         <p>
-          Take a look at some of the projects that I have been working on recently. Do let
-          me know if you see anything that you like. In addition, feel free to checkout my{" "}
+          This is the stuff that is not ready for presentation. Ideas, tinkering projects,
+          or just need more thought. If you have some ideas, please do reach out!
+          Otherwise{" "}
           <Link to={"/projects/wip"} className="link">
-            Work In Progress
-          </Link>{" "}
-          page, for some ideas about what I am tinkering with in my free time.
+            Head back to the projects page
+          </Link>
+          ,{" "}for the good stuff.
         </p>
       </div>
       <ProjectTable projects={projects} />

@@ -27,6 +27,7 @@ interface Project {
 	slug: string;
 	content: string;
 	tech: string[];
+	wip: boolean;
 }
 
 interface Photo {
