@@ -80,9 +80,6 @@ dependencies:
   unified:
     specifier: ^11.0.4
     version: 11.0.4
-  uno-ck-zk2:
-    specifier: ^0.0.1
-    version: 0.0.1
 
 devDependencies:
   '@flydotio/dockerfile':
@@ -7934,10 +7931,6 @@ packages:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
     dev: true
-
-  /uno-ck-zk2@0.0.1:
-    resolution: {integrity: sha512-KIiWh3ljGi1Dm3+2v3Ggklkax7FIffEuAWBdSoYDovZJF2G/3+VyeeMx3CojB0omjf0OKfmHsnCYEt2vZweSAA==}
-    dev: false
 
   /unpipe@1.0.0:
     resolution: {integrity: sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==}
