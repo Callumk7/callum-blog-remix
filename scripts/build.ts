@@ -73,6 +73,7 @@ const getProjectDataFromFile = async (filePath: PathLike): Promise<Project> => {
 		caseStudyUrl,
 		tech,
 		wip,
+		cvDescription,
 	} = data;
 
 	const slug = createSlug(name as string);
@@ -91,6 +92,7 @@ const getProjectDataFromFile = async (filePath: PathLike): Promise<Project> => {
 		slug,
 		tech,
 		wip,
+		cvDescription,
 	};
 };
 

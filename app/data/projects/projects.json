@@ -25,7 +25,8 @@
       "typescript",
       "cloudflare"
     ],
-    "wip": false
+    "wip": false,
+    "cvDescription": "I built a playlist management solution that supports server side rendering (SSR), user authentication, aggregated scores and ratings, and a user activity feed. The app uses React and Remix as the full stack framework, with some additional asyncronous tasks offloaded to a cloudflare application."
   },
   {
     "name": "My Developer Portfolio",
@@ -46,7 +47,8 @@
       "remix",
       "typescript"
     ],
-    "wip": false
+    "wip": false,
+    "cvDescription": "I built an entirely custom portfolio website using React and Remix. I wrote a custom build process which parses markdown content and caches the output into simple JSON for the app to consume on request with response times of less than 7ms."
   },
   {
     "name": "ReCollect Social Journalling",
@@ -96,6 +98,7 @@
       "nextjs",
       "notion"
     ],
-    "wip": false
+    "wip": false,
+    "cvDescription": "I built a client-facing website that utilises Notion as a backend to facilitate dynamic content updates without the need for a complex CMS solution. Data on the inventory can be changed by the client and seen instantly without a build step. Built with Next.js and deployed to Vercel."
   }
 ]

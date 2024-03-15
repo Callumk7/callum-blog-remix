@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { Card } from "../layout/card";
+import { H2 } from "../layout/headers";
 
 interface WorkExperienceProps {
   company: string;
@@ -19,8 +20,8 @@ export function WorkExperience({
   return (
     <Card>
       <TimeWorked dateFrom={dateFrom} dateTo={dateTo} />
-      <h2 className="pb-3 pt-1 font-syne text-xl font-black">{company}</h2>
-      <h2 className="pb-3 pt-1 text-lg font-semibold">{title}</h2>
+      <H2 primary>{company}</H2>
+      <h3 className="pb-3 pt-1 text-lg font-semibold">{title}</h3>
 
       <p>{children}</p>
     </Card>

@@ -28,6 +28,7 @@ interface Project {
 	content: string;
 	tech: string[];
 	wip: boolean;
+	cvDescription?: string;
 }
 
 interface Photo {

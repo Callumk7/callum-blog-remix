@@ -2,16 +2,19 @@ import { SkillsList } from "@/components/cv/skills-list";
 import { WorkExperience } from "@/components/cv/work-experience";
 import { Card } from "@/components/layout/card";
 import { Container } from "@/components/layout/container";
+import { H1, H2, H3 } from "@/components/layout/headers";
 import { Title } from "@/components/layout/title";
 import { InlineLink } from "@/components/navigation/inline-link";
 import { SocialLinks } from "@/components/navigation/social-links";
 import { ProjectCard } from "@/components/projects/project-card";
 import { getAllProjectData } from "@/features/projects/get-projects";
+import { Project } from "@/types";
 import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 
 export const loader = () => {
-  const projects = getAllProjectData();
+  const allProjects = getAllProjectData();
+  const projects = allProjects.filter((project) => !project.wip);
 
   return json({ projects });
 };
@@ -30,42 +33,24 @@ export default function CVRoute() {
   const { projects } = useLoaderData<typeof loader>();
 
   return (
-    <Container>
+    <Container width={"max"}>
       <Card flex>
         <Title title="Callum Kloos" />
-        <h2 className="text-2xl font-bold">Web Developer and Product Specialist</h2>
-        <p className="text-primary-1">
-          Prefer a PDF copy?{" "}
-          <a
-            href="/files/callum-kloos-cv-2024.pdf"
-            target="_blank"
-            rel="noreferrer"
-            className="text-bold mr-6 rounded-md bg-primary-3 p-2 text-background"
-          >
-            Download
-          </a>
-        </p>
-        <SocialLinks />
-      </Card>
-      <div className="grid gap-3 lg:grid-cols-2">
-        <div className="space-y-3">
-          <Card flex>
-            <h1>Projects</h1>
-            <p>
-              Here is a sample of projects that I have worked on. Click on them to learn
-              more, or explore the code on Github.
-            </p>
-            {projects.map((project) => (
-              <ProjectCard key={project.slug} project={project} />
-            ))}
-          </Card>
-          <Card>
-            <h1>Skills</h1>
-            <SkillsList skills={skills} />
-          </Card>
+        <H2>Web Developer and Product Designer</H2>
+        <div className="flex justify-between">
+          <SocialLinks />
+          <p>
+            <span className="mr-5">Prefer a PDF copy?</span> <DownloadCVButton />
+          </p>
         </div>
-        <Card className="row-start-1 row-end-3" flex>
-          <h1>Work History</h1>
+      </Card>
+      <Card>
+        <h1>Skills</h1>
+        <SkillsList skills={skills} />
+      </Card>
+      <div className="grid gap-9 lg:grid-cols-3">
+        <div className="col-span-2 flex flex-col gap-4">
+          <H2>Work History</H2>
           <WorkExperience
             company="Freelance Web Developer"
             title="Web Developer"
@@ -112,8 +97,41 @@ export default function CVRoute() {
             automated documentation fetching and bank integration, and the initiation of
             product led engagement and retention strategies.
           </WorkExperience>
-        </Card>
+        </div>
+        <div className="space-y-3">
+          <H2>Projects</H2>
+          {projects.map((project) => (
+            <CVProjectCard project={project} key={project.slug} />
+          ))}
+        </div>
       </div>
     </Container>
+  );
+}
+
+function DownloadCVButton() {
+  return (
+    <a
+      href="/files/callum-kloos-cv-2024.pdf"
+      target="_blank"
+      rel="noreferrer"
+      className="text-bold mr-6 rounded-md bg-foreground p-2 text-background transition-colors duration-100 ease-in-out hover:bg-primary-1"
+    >
+      Download
+    </a>
+  );
+}
+
+function CVProjectCard({ project }: { project: Project }) {
+  return (
+    <Card>
+      <Link
+        to={`/projects/${project.slug}`}
+        className="transition-colors ease-in-out hover:text-purple-400"
+      >
+        <H2>{project.name}</H2>
+      </Link>
+      <p className="prose prose-invert">{project.cvDescription}</p>
+    </Card>
   );
 }

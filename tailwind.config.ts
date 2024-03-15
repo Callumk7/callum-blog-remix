@@ -21,6 +21,7 @@ export default {
 				background: {
 					DEFAULT: "hsl(var(--background))",
 					hover: "hsl(var(--background-hover))",
+					"hover-light": "hsl(var(--background-hover-light))",
 					accent: "hsl(var(--background-accent))",
 				},
 				foreground: "hsl(var(--foreground))",

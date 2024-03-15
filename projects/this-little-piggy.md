@@ -10,6 +10,7 @@ githubUrl: "https://github.com/Callumk7/my-little-piggy-homepage"
 related: ["array", "of related", "articles"]
 tech: ["react", "nextjs", "notion"]
 wip: false
+cvDescription: "I built a client-facing website that utilises Notion as a backend to facilitate dynamic content updates without the need for a complex CMS solution. Data on the inventory can be changed by the client and seen instantly without a build step. Built with Next.js and deployed to Vercel."
 ---
 
 **Introduction**
