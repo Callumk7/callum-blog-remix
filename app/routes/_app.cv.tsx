@@ -37,7 +37,7 @@ export default function CVRoute() {
         <p className="text-primary-1">
           Prefer a PDF copy?{" "}
           <a
-            href="/api/cv/pdf"
+            href="/files/callum-kloos-cv-2024.pdf"
             target="_blank"
             rel="noreferrer"
             className="text-bold mr-6 rounded-md bg-primary-3 p-2 text-background"
