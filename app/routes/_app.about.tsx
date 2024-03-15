@@ -1,5 +1,7 @@
 import Profile from "@/components/about/profile";
 import { Container } from "@/components/layout/container";
+import { Admonition } from "@/components/ui/admonition";
+import { Link } from "@remix-run/react";
 
 export default function AboutPage() {
   return (
@@ -24,6 +26,13 @@ export default function AboutPage() {
               When I am not programming, I enjoy walking my dog, chess, photography and
               running. Reach out and lets connect!
             </p>
+            <Admonition variant="note">
+              If you are looking for an incredible new hire,{" "}
+              <Link to="/cv" className="link">
+                check out my CV
+              </Link>{" "}
+              and reach out!
+            </Admonition>
           </div>
         </div>
       </Container>

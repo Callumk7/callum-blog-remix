@@ -10,7 +10,7 @@ author:
     imageUrl: "/avatar.jpeg"
 ---
 
-When designing the new website for [This Little Piggy Richmond](/projects/thislittlepiggyrichmond) , a non-profit organisation dedicated to rehoming guinea pigs, the top priority was a simple and efficient system for adding content to the website. The organization needed a solution that allowed them to move quickly without being bogged down by complex processes or systems prone to errors and frustration. The website is a crucial part of their work, and the ability to update it promptly was key.
+When designing the new website for [This Little Piggy Richmond](/projects/this-little-piggy-richmond) , a non-profit organisation dedicated to rehoming guinea pigs, the top priority was a simple and efficient system for adding content to the website. The organization needed a solution that allowed them to move quickly without being bogged down by complex processes or systems prone to errors and frustration. The website is a crucial part of their work, and the ability to update it promptly was key.
 
 ## The Challenge: High Turnover and Cute Content
 
@@ -41,4 +41,4 @@ After exploring various options, we had the idea of using Notion as the backend,
 
 **Mark as Ready**: To prevent accidental publishing of incomplete or unready data, we implemented a tagging system in Notion. Only data marked as "website-ready" would be pulled and displayed on the front-end.
 
-By leveraging Notion as the backend and implementing these measures, we were able to provide [This Little Piggy Richmond](/projects/thislittlepiggyrichmond) with a simple and efficient content management system that met their needs for promptly updating their website with the latest adorable guinea pig content.
+By leveraging Notion as the backend and implementing these measures, we were able to provide [This Little Piggy Richmond](/projects/this-little-piggy-richmond) with a simple and efficient content management system that met their needs for promptly updating their website with the latest adorable guinea pig content.
