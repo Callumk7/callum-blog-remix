@@ -2,6 +2,7 @@ import { SkillsList } from "@/components/cv/skills-list";
 import { WorkExperience } from "@/components/cv/work-experience";
 import { Card } from "@/components/layout/card";
 import { Container } from "@/components/layout/container";
+import { Title } from "@/components/layout/title";
 import { InlineLink } from "@/components/navigation/inline-link";
 import { SocialLinks } from "@/components/navigation/social-links";
 import { ProjectCard } from "@/components/projects/project-card";
@@ -27,11 +28,23 @@ const skills = [
 
 export default function CVRoute() {
   const { projects } = useLoaderData<typeof loader>();
+
   return (
     <Container>
       <Card flex>
-        <h1>Callum Kloos</h1>
-        <h2>Web Developer and Product Specialist</h2>
+        <Title title="Callum Kloos" />
+        <h2 className="text-2xl font-bold">Web Developer and Product Specialist</h2>
+        <p className="text-primary-1">
+          Prefer a PDF copy?{" "}
+          <a
+            href="/api/cv/pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="text-bold mr-6 rounded-md bg-primary-3 p-2 text-background"
+          >
+            Download
+          </a>
+        </p>
         <SocialLinks />
       </Card>
       <div className="grid gap-3 lg:grid-cols-2">
