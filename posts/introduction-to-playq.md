@@ -4,7 +4,7 @@ description: "playQ is a groundbreaking application designed to revolutionize th
 projectShortName: "playq"
 coverImageUrl: "/images/projects/playq/1.png"
 date: "2024-02-25"
-tags: ["web development", "react", "remix", "playQ", "supabase", "drizzleorm", "radix-ui"]
+tags: ["playQ"]
 author:
     name: "Callum Kloos"
     imageUrl: "/avatar.jpeg"

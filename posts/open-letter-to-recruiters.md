@@ -3,7 +3,7 @@ title: "An Open Letter to Potential Recruiters"
 description: "Thank you for stopping by! If you have not read my bespoke cover letter yet, then please enjoy this open letter instead"
 coverImageUrl: "https://images.unsplash.com/photo-1483389127117-b6a2102724ae?q=80&w=3348&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 date: "2024-03-07"
-tags: []
+tags: ["web development"]
 author:
     name: "Callum Kloos"
     imageUrl: "/avatar.jpeg"

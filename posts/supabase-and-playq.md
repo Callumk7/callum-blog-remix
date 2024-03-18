@@ -5,7 +5,7 @@ projectShortName: "playq"
 coverImageUrl: "https://images.unsplash.com/photo-1536244292405-630fd4dd38a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2848&q=80"
 tags: ["Supabase", "Firebase", "Game Management", "Playlist"]
 date: "2024-03-06"
-tech: ["Supabase", "Remix", "React", "DrizzleORM", "Radix-UI", "ShaD/CN"]
+tech: ["supabase", "backend"]
 author:
     name: "Callum Kloos"
     imageUrl: "/avatar.jpeg"
