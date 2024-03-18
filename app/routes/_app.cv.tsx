@@ -109,7 +109,7 @@ export default function CVRoute() {
             product led engagement and retention strategies.
           </WorkExperience>
         </div>
-        <div className="space-y-3">
+        <div className="space-y-3 w-full col-span-2 lg:col-span-1">
           <H2>Projects</H2>
           {projects.map((project) => (
             <CVProjectCard project={project} key={project.slug} />
@@ -149,7 +149,7 @@ function DownloadCVButton() {
 
 function CVProjectCard({ project }: { project: Project }) {
   return (
-    <Card>
+    <Card className="w-full">
       <Link
         to={`/projects/${project.slug}`}
         className="transition-colors ease-in-out hover:text-purple-400"

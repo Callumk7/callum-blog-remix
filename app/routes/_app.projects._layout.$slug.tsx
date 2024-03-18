@@ -1,9 +1,9 @@
 import { Container } from "@/components/layout/container";
 import { PostBody } from "@/components/posts/post-body";
 import { getProjectBySlug } from "@/features/projects/get-projects";
-import { LinksFunction, LoaderFunctionArgs, json, redirect } from "@remix-run/node";
+import { LoaderFunctionArgs, json, redirect } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import styles from "@/styles/prism.css";
+import "@/styles/prism.css";
 import {
   Carousel,
   CarouselContent,
@@ -12,8 +12,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { getProjectImageSrcs } from "@/lib/images/get-project-images";
-
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
 ///
 /// LOADER
