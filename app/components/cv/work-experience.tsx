@@ -3,15 +3,15 @@ import { Card } from "../layout/card";
 import { H2 } from "../layout/headers";
 
 interface WorkExperienceProps {
-  company: string;
+  institution: string;
   dateFrom: Date;
   dateTo: Date | "current";
   title: string;
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 export function WorkExperience({
-  company,
+  institution,
   dateFrom,
   dateTo,
   title,
@@ -20,9 +20,8 @@ export function WorkExperience({
   return (
     <Card>
       <TimeWorked dateFrom={dateFrom} dateTo={dateTo} />
-      <H2 primary>{company}</H2>
+      <H2 primary>{institution}</H2>
       <h3 className="pb-3 pt-1 text-lg font-semibold">{title}</h3>
-
       <p>{children}</p>
     </Card>
   );

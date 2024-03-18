@@ -1,7 +1,7 @@
 {
   "react": 4,
-  "remix": 3,
-  "cloudflare": 2,
+  "remix": 4,
+  "cloudflare": 3,
   "supabase": 2,
   "typescript": 2,
   "ssr": 1,

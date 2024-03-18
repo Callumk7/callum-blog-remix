@@ -2,11 +2,10 @@ import { SkillsList } from "@/components/cv/skills-list";
 import { WorkExperience } from "@/components/cv/work-experience";
 import { Card } from "@/components/layout/card";
 import { Container } from "@/components/layout/container";
-import { H1, H2, H3 } from "@/components/layout/headers";
+import { H2 } from "@/components/layout/headers";
+import { Separator } from "@/components/layout/separator";
 import { Title } from "@/components/layout/title";
-import { InlineLink } from "@/components/navigation/inline-link";
 import { SocialLinks } from "@/components/navigation/social-links";
-import { ProjectCard } from "@/components/projects/project-card";
 import { getAllProjectData } from "@/features/projects/get-projects";
 import { Project } from "@/types";
 import { json } from "@remix-run/node";
@@ -27,6 +26,9 @@ const skills = [
   "SQl (Postgres)",
   "nodejs",
   "nextjs",
+  "product management",
+  "ux research and design",
+  "data analysis",
 ];
 
 export default function CVRoute() {
@@ -37,6 +39,12 @@ export default function CVRoute() {
       <Card flex>
         <Title title="Callum Kloos" />
         <H2>Web Developer and Product Designer</H2>
+        <p className="pb-7">
+          Self motivated and ambitious web developer who has built complex web
+          applications from the ground up with HTML, CSS, Typescript and React. Ex.
+          Product manager with four years of experience, I am seeking new opportunities in
+          a technical web development role.
+        </p>
         <div className="flex justify-between">
           <SocialLinks />
           <p>
@@ -45,14 +53,14 @@ export default function CVRoute() {
         </div>
       </Card>
       <Card>
-        <h1>Skills</h1>
+        <H2>Skills</H2>
         <SkillsList skills={skills} />
       </Card>
       <div className="grid gap-9 lg:grid-cols-3">
         <div className="col-span-2 flex flex-col gap-4">
           <H2>Work History</H2>
           <WorkExperience
-            company="Freelance Web Developer"
+            institution="Freelance Web Developer"
             title="Web Developer"
             dateFrom={new Date("2019-07-01")}
             dateTo={new Date("2020-09-01")}
@@ -60,20 +68,20 @@ export default function CVRoute() {
             <div className="leading-loose">
               Dedicated full-time hours to immerse myself in the craft of web development.
               Built{" "}
-              <InlineLink to={"/projects/playq-videogame-playlist-manager"}>
+              <Link className="link" to={"/projects/playq-videogame-playlist-manager"}>
                 playQ
-              </InlineLink>{" "}
+              </Link>{" "}
               to touch all aspects of the web development pipeline. Built{" "}
-              <InlineLink to={"/projects/this-little-piggy-richmond"}>
+              <Link className="link" to={"/projects/this-little-piggy-richmond"}>
                 This Little Piggy
-              </InlineLink>{" "}
+              </Link>{" "}
               for a local animal rescue charity. Built a personal portfolio. During this
               time I have become proficient with React, Remix, Serverless and serverful
               deployment environments, api design and database design.
             </div>
           </WorkExperience>
           <WorkExperience
-            company="Cambrian Games"
+            institution="Cambrian Games"
             title="UX Strategy Consultant"
             dateFrom={new Date("2019-07-01")}
             dateTo={new Date("2020-09-01")}
@@ -83,7 +91,7 @@ export default function CVRoute() {
             design foundations for user testing and future development.
           </WorkExperience>
           <WorkExperience
-            company="Receipt Bank"
+            institution="Receipt Bank"
             title="Product Manager"
             dateFrom={new Date("2019-07-01")}
             dateTo={new Date("2020-09-01")}
@@ -103,6 +111,20 @@ export default function CVRoute() {
           {projects.map((project) => (
             <CVProjectCard project={project} key={project.slug} />
           ))}
+          <Separator />
+          <H2>Education</H2>
+          <WorkExperience
+            institution="University of Strathclyde"
+            title="MEng Mechanical Engineering (Merit)"
+            dateFrom={new Date("2009-09-01")}
+            dateTo={new Date("2015-09-01")}
+          ></WorkExperience>
+          <WorkExperience
+            institution="CareerFoundry"
+            title="UX Immersion"
+            dateFrom={new Date("2020-10-01")}
+            dateTo={new Date("2021-09-01")}
+          ></WorkExperience>
         </div>
       </div>
     </Container>

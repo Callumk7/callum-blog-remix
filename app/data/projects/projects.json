@@ -79,6 +79,28 @@
     "wip": true
   },
   {
+    "name": "Spotify Shared Playlists",
+    "shortName": "spotifysharedplaylists",
+    "description": "A weekend project that allows friends to create joint playlists, that can be easily filtered to create playback vibes. Useful for sharing who you are interested in seeing at festivals.",
+    "projectUrl": "https://spotify-playlists-bs5.pages.dev",
+    "githubUrl": "https://github.com/Callumk7/spotify-playlists",
+    "coverImageUrl": "http://image.com",
+    "tags": [
+      "cloudflare",
+      "remix"
+    ],
+    "caseStudyUrl": "link to article on this project",
+    "content": "<p>A weekend project experimenting with</p>\n<ol>\n<li>using an external oAuth flow for user authentication via cookies</li>\n<li>using cloudflare and d1 for a serverless deployment</li>\n<li>vite as a bundler for remix apps</li>\n<li>caching using cloudflare kv</li>\n</ol>\n",
+    "slug": "spotify-shared-playlists",
+    "tech": [
+      "cloudflare",
+      "remix",
+      "d1"
+    ],
+    "wip": true,
+    "cvDescription": "A weekend project that allows friends to create joint playlists, that can be easily filtered to create playback vibes. Useful for sharing who you are interested in seeing at festivals."
+  },
+  {
     "name": "This Little Piggy Richmond",
     "shortName": "thislittlepiggyrichmond",
     "description": "Animal Rescue Charity focusing on Guinea Pigs",
