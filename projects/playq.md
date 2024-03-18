@@ -39,8 +39,3 @@ PlayQ is not just a game playlist management app, it's also a comprehensive lear
 **Radix-UI and Shad/cn Inspired Components** - To further refine the user interface, the app uses Radix-UI, a library of low-level, accessible and unstyled UI components for building high-quality web interfaces. The UI design is also influenced by ShaD/CN styled-components, favouring a modern and minimalist aesthetic.
 
 By using these technologies, PlayQ showcases how sophisticated tech stacks can be combined for efficient coding practices and superior user experience.
-
-## Database Design
-
-![[Database design.svg]]
-Utilised a many to many database design to enable many key features of the collection manager.

@@ -19,10 +19,13 @@ export const loader = () => {
 };
 
 const skills = [
+  "HTML",
+  "CSS",
+  "javascript",
+  "typescript",
   "react",
   "remix",
-  "typescript",
-  "javascript",
+  "tailwind",
   "SQl (Postgres)",
   "nodejs",
   "nextjs",
@@ -65,7 +68,7 @@ export default function CVRoute() {
             dateFrom={new Date("2019-07-01")}
             dateTo={new Date("2020-09-01")}
           >
-            <div className="leading-loose">
+            <div>
               Dedicated full-time hours to immerse myself in the craft of web development.
               Built{" "}
               <Link className="link" to={"/projects/playq-videogame-playlist-manager"}>
@@ -137,7 +140,7 @@ function DownloadCVButton() {
       href="/files/callum-kloos-cv-2024.pdf"
       target="_blank"
       rel="noreferrer"
-      className="text-bold mr-6 rounded-md bg-foreground p-2 text-background transition-colors duration-100 ease-in-out hover:bg-primary-1"
+      className="text-bold mr-6 rounded-md bg-foreground p-2 text-background transition-colors duration-100 ease-in-out hover:bg-primary-1 active:bg-primary-2"
     >
       Download
     </a>
