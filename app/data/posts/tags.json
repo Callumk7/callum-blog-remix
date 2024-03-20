@@ -1,9 +1,5 @@
 {
-  "web development": 3,
+  "web development": 4,
   "playQ": 1,
-  "backend": 1,
-  "Supabase": 1,
-  "Firebase": 1,
-  "Game Management": 1,
-  "Playlist": 1
+  "backend": 2
 }
