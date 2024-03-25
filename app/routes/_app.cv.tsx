@@ -38,7 +38,7 @@ export default function CVRoute() {
   const { projects } = useLoaderData<typeof loader>();
 
   return (
-    <Container width={"max"}>
+    <Container width={"mobMax"}>
       <Card flex>
         <Title title="Callum Kloos" />
         <H2>Web Developer and Product Designer</H2>
@@ -109,7 +109,7 @@ export default function CVRoute() {
             product led engagement and retention strategies.
           </WorkExperience>
         </div>
-        <div className="space-y-3 w-full col-span-2 lg:col-span-1">
+        <div className="col-span-2 w-full space-y-3 lg:col-span-1">
           <H2>Projects</H2>
           {projects.map((project) => (
             <CVProjectCard project={project} key={project.slug} />

@@ -1,21 +1,5 @@
 [
   {
-    "title": "What Am I Focussing on Now?",
-    "description": "playQ is at the stage where the T's are being crossed and the I's dotted. Where is my time going next?",
-    "projectShortName": "misc",
-    "content": "<p>So I am getting close to finishing up my project <a href=\"https://playQ.xyz\">playQ</a>, and I am going to have time to put towards some other projects. This post is an opportunity to put down my thoughts and see where I want to go next on my learning journey.</p>\n<h2>Projects</h2>\n<p>The first, and most obvious choice would be to dedicate the time to starting a new project. I have some cool ideas cooking:</p>\n<ol>\n<li>LLM powered world building assistant,</li>\n<li>Project management / file management discord bot</li>\n<li>Finish Recollect - a social journalling app</li>\n</ol>\n<p>It is very likely that I will pick one of these up, and whilst doing so, make a deliberate effort to document my process for starting projects, and create a base-line or starting point with my preferred stack.</p>\n<h2>Learn a Language</h2>\n<p>I am a curious person, and I really want to build a proficiency with more languages than just js/ts.</p>\n",
-    "coverImageUrl": "https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "date": "2024-03-18",
-    "author": {
-      "name": "Callum Kloos",
-      "imageUrl": "/avatar.jpeg"
-    },
-    "tags": [
-      "web development"
-    ],
-    "slug": "what-am-i-focussing-on-now"
-  },
-  {
     "title": "Announcement! You can view and download my CV online",
     "description": "My CV is now available from this website, please do check it out.",
     "projectShortName": "",
