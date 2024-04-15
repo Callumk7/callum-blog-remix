@@ -3,7 +3,7 @@ import { PostTitle } from "@/components/posts/post-title";
 import { LoaderFunctionArgs, json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 
-import "@/styles/prism.css";
+// import "@/styles/prism.css";
 import { getPostBySlug } from "@/features/posts/get-posts";
 import { CoverImage } from "@/components/posts/cover-image";
 import { Pill } from "@/components/tags/pill";

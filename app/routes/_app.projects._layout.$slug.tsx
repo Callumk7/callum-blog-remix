@@ -3,7 +3,7 @@ import { PostBody } from "@/components/posts/post-body";
 import { getProjectBySlug } from "@/features/projects/get-projects";
 import { LoaderFunctionArgs, json, redirect } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import "@/styles/prism.css";
+// import "@/styles/prism.css";
 import {
   Carousel,
   CarouselContent,
@@ -43,7 +43,10 @@ export default function ProjectsPage() {
               <CarouselItem key={image}>
                 <figure>
                   <div className="overflow-hidden rounded-lg border">
-                    <img src={image} className="h-full w-full object-cover object-center" />
+                    <img
+                      src={image}
+                      className="h-full w-full object-cover object-center"
+                    />
                   </div>
                   <figcaption className="mt-3 text-center font-mono">{image}</figcaption>
                 </figure>
